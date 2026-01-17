@@ -2,119 +2,144 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Trophy } from "lucide-react";
+import { Calendar, MapPin, Sparkles } from "lucide-react";
 
 export function Hero() {
     return (
-        <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-dark">
+        <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-dark text-white">
             {/* Animated Background */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#0F172A] via-[#1E1B4B] to-[#312E81] opacity-90"></div>
-                {/* Abstract Shapes */}
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#000000] via-[#0F172A] to-[#1E1B4B] opacity-95"></div>
+                {/* Network/AI Theme Animation */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.1 }}
+                    transition={{ duration: 2 }}
+                    className="absolute inset-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-repeat"
+                />
+                {/* Glowing Orbs */}
                 <motion.div
                     animate={{
-                        rotate: [0, 360],
-                        scale: [1, 1.2, 1],
+                        y: [0, -20, 0],
+                        opacity: [0.3, 0.6, 0.3],
                     }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] rounded-full bg-purple-600/20 blur-[100px]"
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute top-1/4 left-1/4 w-[300px] h-[300px] rounded-full bg-blue-600/20 blur-[100px]"
                 />
                 <motion.div
                     animate={{
-                        rotate: [360, 0],
-                        scale: [1, 1.3, 1],
+                        y: [0, 20, 0],
+                        opacity: [0.3, 0.6, 0.3],
                     }}
-                    transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                    className="absolute -bottom-[20%] -right-[10%] w-[50vw] h-[50vw] rounded-full bg-orange-600/10 blur-[100px]"
+                    transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-purple-600/20 blur-[120px]"
                 />
             </div>
 
-            <div className="container mx-auto px-4 z-10 relative text-center text-white">
+            <div className="container mx-auto px-4 z-10 relative text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="max-w-4xl mx-auto"
+                    className="max-w-5xl mx-auto"
                 >
-                    {/* Institution Logos Row */}
-                    <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 mb-10 opacity-90">
-                        <div className="text-center group">
-                            <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mb-3 group-hover:bg-white/20 transition-all border border-white/20">
-                                <span className="text-xs text-center text-gray-300">PSVPEC Logo</span>
-                            </div>
-                            <p className="text-xs text-gray-400 max-w-[150px] mx-auto">
-                                Prince Shri Venkateshwara Padmavathy Engineering College
-                            </p>
-                        </div>
-
-                        <div className="text-secondary font-bold text-sm tracking-widest uppercase mb-4 md:mb-0">
-                            In Collaboration With
-                        </div>
-
-                        <div className="text-center group">
-                            <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mb-3 group-hover:bg-white/20 transition-all border border-white/20">
-                                <span className="text-xs text-center text-gray-300">Samarkand Logo</span>
-                            </div>
-                            <p className="text-xs text-gray-400 max-w-[150px] mx-auto">
-                                Samarkand State University, Uzbekistan
-                            </p>
-                        </div>
+                    {/* Top Labels */}
+                    <div className="flex flex-wrap justify-center gap-4 mb-8">
+                        <span className="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold tracking-widest uppercase border border-white/20">
+                            Organized by MSEC
+                        </span>
+                        <span className="px-3 py-1 bg-primary/20 backdrop-blur-md rounded-full text-xs font-bold tracking-widest uppercase text-primary border border-primary/20">
+                            Approved by AICTE
+                        </span>
                     </div>
 
-                    <motion.h1
-                        className="text-4xl md:text-6xl font-bold mb-4 font-heading bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400"
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.2, duration: 0.8 }}
-                    >
-                        14th INTERNATIONAL CONFERENCE ON CONTEMPORARY ENGINEERING AND
-                        TECHNOLOGY
-                    </motion.h1>
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-heading leading-tight">
+                        <span className="block text-2xl md:text-3xl font-normal text-gray-400 mb-2">International Conference on</span>
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-white to-purple-400 text-shadow-lg">
+                            TRANSFORMATIVE AI
+                        </span>
+                        <br />
+                        <span className="text-white">FOR GLOBAL IMPACT</span>
+                    </h1>
+
+                    <p className="text-xl md:text-2xl text-gray-300 mb-8 italic font-light">
+                        “Exploring how AI transforms industries, society, and sustainability”
+                    </p>
 
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5 }}
-                        className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-10"
+                        className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-12"
                     >
-                        <div className="flex items-center gap-2 text-primary text-xl font-medium italic bg-orange-500/10 px-4 py-2 rounded-full backdrop-blur-sm border border-orange-500/20">
-                            <span>Hybrid Conference</span>
+                        <div className="flex items-center gap-3 text-white text-lg bg-white/5 px-6 py-3 rounded-xl border border-white/10 backdrop-blur-sm">
+                            <Calendar className="text-primary" />
+                            <span className="font-bold">12-14 Aug 2026</span>
                         </div>
-                        <div className="flex items-center gap-2 text-white text-lg">
-                            <Calendar className="text-secondary" />
-                            <span>March 22nd – 23rd, 2026</span>
-                        </div>
-                        <div className="hidden md:block w-px h-6 bg-gray-600"></div>
-                        <div className="flex items-center gap-2 text-white text-lg">
+
+                        <div className="flex items-center gap-3 text-white text-lg bg-white/5 px-6 py-3 rounded-xl border border-white/10 backdrop-blur-sm">
                             <MapPin className="text-secondary" />
-                            <span>Chennai, India</span>
+                            <span className="font-bold">MSEC, Chennai, India</span>
                         </div>
                     </motion.div>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.8 }}
-                    >
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <Link
                             href="/registration"
-                            className="inline-block px-10 py-4 bg-primary text-white text-lg font-bold rounded-full hover:bg-orange-600 transition-all shadow-[0_0_20px_rgba(249,115,22,0.5)] hover:shadow-[0_0_30px_rgba(249,115,22,0.8)] hover:scale-105"
+                            className="px-8 py-4 bg-primary text-white text-lg font-bold rounded-full hover:bg-orange-600 transition-all shadow-glow hover:shadow-glow-lg hover:scale-105 flex items-center gap-2"
                         >
+                            <Sparkles size={20} />
                             REGISTER NOW
                         </Link>
-                    </motion.div>
-                </motion.div>
-            </div>
+                        <Link
+                            href="/call-for-papers"
+                            className="px-8 py-4 bg-white/10 text-white text-lg font-bold rounded-full hover:bg-white/20 transition-all border border-white/20 backdrop-blur-md"
+                        >
+                            Call for Papers
+                        </Link>
+                    </div>
 
-            {/* Shapes for decor */}
-            <div className="absolute bottom-0 left-0 w-full overflow-hidden">
-                <svg
-                    viewBox="0 0 1200 120"
-                    preserveAspectRatio="none"
-                    className="relative block w-full h-[60px] md:h-[100px] fill-gray-50"
-                >
-                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
-                </svg>
+                    {/* Partner Logos Strip */}
+                    <div className="mt-16 pt-8 border-t border-white/10">
+                        <p className="text-xs text-gray-500 uppercase tracking-widest mb-4">Supported By</p>
+                        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80 hover:opacity-100 transition-opacity duration-300 bg-white/5 py-6 px-8 rounded-2xl backdrop-blur-sm border border-white/5">
+                            {/* ISRO */}
+                            <div className="bg-white p-2 rounded h-12 w-auto flex items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Indian_Space_Research_Organisation_Logo.svg" alt="ISRO" className="h-full w-auto object-contain" />
+                            </div>
+
+                            {/* NIELIT */}
+                            <div className="bg-white p-2 rounded h-12 w-auto flex items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/National_Institute_of_Electronics_%26_Information_Technology_logo.png/220px-National_Institute_of_Electronics_%26_Information_Technology_logo.png" alt="NIELIT" className="h-full w-auto object-contain" />
+                            </div>
+
+                            {/* C-DAC */}
+                            <div className="bg-white p-2 rounded h-12 w-auto flex items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/C-DAC_Logo.png" alt="C-DAC" className="h-full w-auto object-contain" />
+                            </div>
+
+                            {/* NIOT */}
+                            <div className="bg-white p-2 rounded h-12 w-auto flex items-center justify-center">
+                                <img src="https://www.niot.res.in/niot1/images/niot_logo.png" alt="NIOT" className="h-full w-auto object-contain" />
+                            </div>
+
+                            {/* ZF */}
+                            <div className="bg-white p-2 rounded h-12 w-auto flex items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/ZF_Friedrichshafen_AG_Logo.svg" alt="ZF" className="h-full w-auto object-contain" />
+                            </div>
+
+                            {/* Virtusa */}
+                            <div className="bg-white p-2 rounded h-12 w-auto flex items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Virtusa_Logo.svg" alt="Virtusa" className="h-full w-auto object-contain" />
+                            </div>
+
+                            {/* Springer */}
+                            <div className="bg-white p-2 rounded h-12 w-auto flex items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Springer_Nature_Logo.svg/1024px-Springer_Nature_Logo.svg.png" alt="Springer" className="h-full w-auto object-contain" />
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

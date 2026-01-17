@@ -3,24 +3,20 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
     return (
-        <footer className="bg-dark text-white pt-16 pb-8">
+        <footer className="bg-dark text-white pt-16 pb-8 border-t border-white/10">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                     {/* About */}
                     <div>
-                        <h3 className="text-xl font-bold mb-4 text-secondary">
-                            14th ICCET 2026
+                        <h3 className="text-xl font-bold mb-4 text-white">
+                            ICTAGI 2026
                         </h3>
                         <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                            International Conference on Contemporary Engineering and Technology.
-                            Bringing together researchers and innovators from around the globe.
+                            International Conference on Transformative AI for Global Impact. Organized by Meenakshi Sundararajan Engineering College.
                         </p>
                         <div className="flex gap-2">
-                            <span className="text-sm font-semibold text-white">
-                                Collaboration with:
-                            </span>
                             <span className="text-sm text-gray-400">
-                                Samarkand State University, Uzbekistan
+                                Approved by AICTE | Accredited by NBA, NAAC "A" Grade
                             </span>
                         </div>
                     </div>
@@ -31,7 +27,7 @@ export function Footer() {
                         <ul className="space-y-2 text-sm text-gray-400">
                             <li>
                                 <Link href="/about" className="hover:text-primary transition-colors">
-                                    About Conference
+                                    About MSEC
                                 </Link>
                             </li>
                             <li>
@@ -47,15 +43,7 @@ export function Footer() {
                                     href="/registration"
                                     className="hover:text-primary transition-colors"
                                 >
-                                    Registration
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/paper-submission"
-                                    className="hover:text-primary transition-colors"
-                                >
-                                    Submission Guidelines
+                                    Registration Fees
                                 </Link>
                             </li>
                             <li>
@@ -76,55 +64,43 @@ export function Footer() {
                             <li className="flex items-start gap-3">
                                 <MapPin className="shrink-0 text-primary" size={18} />
                                 <span>
-                                    Prince Shri Venkateshwara Padmavathy Engineering College, <br />
-                                    Medavakkam – Mambakkam Road, <br />
-                                    Ponmar, Chennai - 600127
+                                    Meenakshi Sundararajan Engineering College,<br />
+                                    Chennai, India
                                 </span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail className="shrink-0 text-primary" size={18} />
                                 <a
-                                    href="mailto:iccet2026@gmail.com"
+                                    href="mailto:ictagi@msec.edu.in"
                                     className="hover:text-white transition-colors"
                                 >
-                                    iccet2026@gmail.com
+                                    ictagi@msec.edu.in
                                 </a>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="shrink-0 text-primary" size={18} />
-                                <span>+91 98765 43210</span>
+                                <span>+91 7358058584</span>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Map/Extra */}
+                    {/* Connect */}
                     <div>
-                        <h3 className="text-lg font-bold mb-4">Venue Location</h3>
-                        <div className="w-full h-32 bg-gray-800 rounded-lg overflow-hidden relative group">
-                            {/* Placeholder for map image or interactive map */}
-                            <div className="absolute inset-0 bg-gray-700 flex items-center justify-center text-xs text-gray-500">
-                                Map Preview
-                            </div>
-                            <a
-                                href="https://maps.google.com" // Replace with actual link
-                                target="_blank"
-                                rel="noreferrer"
-                                className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity text-white text-sm font-medium"
-                            >
-                                View on Google Maps
-                            </a>
+                        <h3 className="text-lg font-bold mb-4">Collaboration</h3>
+                        <p className="text-xs text-gray-400 mb-2">Technical Partners:</p>
+                        <div className="flex flex-wrap gap-2 text-xs text-gray-500">
+                            <span>Springer</span> •
+                            <span>ISRO</span> •
+                            <span>NIELIT</span> •
+                            <span>CDAC</span>
                         </div>
                     </div>
                 </div>
 
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-sm text-gray-500 text-center md:text-left">
-                        © 2026 ICCET. All rights reserved. Designed for PSVPEC.
+                        © 2026 MSEC. All rights reserved.
                     </p>
-                    <div className="flex gap-4">
-                        <span className="text-xs text-gray-600">Privacy Policy</span>
-                        <span className="text-xs text-gray-600">Terms of Service</span>
-                    </div>
                 </div>
             </div>
         </footer>

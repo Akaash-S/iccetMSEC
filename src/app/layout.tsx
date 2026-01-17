@@ -8,9 +8,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
-  title: "14th ICCET 2026 | International Conference",
+  title: "ICTAGI 2026 | Transformative AI for Global Impact",
   description:
-    "14th International Conference on Contemporary Engineering and Technology (ICCET 2026) at Prince Shri Venkateshwara Padmavathy Engineering College, Chennai.",
+    "International Conference on Transformative AI for Global Impact (ICTAGI 2026) at Meenakshi Sundararajan Engineering College, Chennai.",
 };
 
 export default function RootLayout({

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "About | ICCET 2026",
+    title: "About | ICTAGI 2026",
 };
 
 export default function AboutPage() {
@@ -9,7 +9,7 @@ export default function AboutPage() {
         <div className="pt-10 pb-20">
             <header className="bg-gray-100 py-20 mb-12">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl font-bold font-heading text-dark mb-4">About ICCET 2026</h1>
+                    <h1 className="text-4xl font-bold font-heading text-dark mb-4">About ICTAGI 2026</h1>
                     <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
                 </div>
             </header>
@@ -22,49 +22,33 @@ export default function AboutPage() {
                     </h2>
                     <div className="prose prose-lg text-gray-700">
                         <p className="mb-4">
-                            ICCET 2026 is an annual International conference covering research in Contemporary Engineering and Technology.
-                            The 14th International Conference on Contemporary Engineering and Technology 2026 (ICCET) will be held in
-                            Prince Shri Venkateshwara Padmavathy Engineering College, Chennai, India on March 22nd – 23rd, 2026.
+                            <strong>ICTAGI 2026</strong> (International Conference on Transformative AI for Global Impact) is a premier gathering of researchers, practitioners, and industry experts. The conference focuses on exploring how Artificial Intelligence transforms industries, society, and sustainability.
+                        </p>
+                        <p className="mb-4">
+                            The conference will be held at <strong>Meenakshi Sundararajan Engineering College, Chennai, India</strong> from <strong>August 12th – 14th, 2026</strong>.
                         </p>
                         <p>
-                            ICCET 2026 conference is held in collaboration with Samarkand State University, Uzbekistan.
-                            The conference aims to bring together leading academic scientists, researchers and research scholars to exchange
-                            and share their experiences and research results on all aspects of Engineering and Technology.
-                            It also provides a premier interdisciplinary platform for researchers, practitioners and educators to present
-                            and discuss the most recent innovations, trends, and concerns as well as practical challenges encountered
-                            and solutions adopted in the fields of Contemporary Engineering and Technology.
+                            It provides a premier interdisciplinary platform to discuss the most recent innovations, trends, and concerns as well as practical challenges encountered and solutions adopted in the fields of Artificial Intelligence and its global impact.
                         </p>
                     </div>
                 </section>
 
-                <section id="psvpec">
+                <section id="msec">
                     <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
                         <span className="w-8 h-1 bg-primary inline-block"></span>
-                        About PSVPEC
+                        About MSEC
                     </h2>
-                    <div className="prose prose-lg text-gray-700 bg-orange-50 p-8 rounded-2xl border border-orange-100">
-                        <h3 className="text-xl font-bold mb-4 text-dark">Prince Shri Venkateshwara Padmavathy Engineering College</h3>
+                    <div className="text-gray-700 bg-orange-50 p-8 rounded-2xl border border-orange-100 leading-relaxed text-lg">
+                        <h3 className="text-xl font-bold mb-4 text-dark">Meenakshi Sundararajan Engineering College</h3>
                         <p className="mb-4">
-                            Prince Educational Society was established in 1978 by our Founder - Chairman Dr. K. Vasudevan, M.A., B.Ed., Ph.D.
-                            He is a Educationist, Philanthropist and a Visionary. Over the years, the society has grown into a major educational
-                            group with several Arts and Science Colleges, Engineering Colleges, and Schools.
+                            <strong>Meenakshi Sundararajan Engineering College (MSEC)</strong> was established by the IIET Society in 2001. This institution is a part of the prestigious KRS Group of Institutions which also includes the renowned IIET (Indian Institute of Engineering Technology) established in 1947 by our Founder <strong>Late Shri K.R. Sundararajan</strong>, the well-known Meenakshi College for Women and the more recently established Meenakshi Sundararajan School of Management.
                         </p>
-
-                        <div className="grid md:grid-cols-2 gap-8 mt-8">
-                            <div>
-                                <h4 className="font-bold text-lg mb-2 text-dark">Vision</h4>
-                                <p className="text-sm">
-                                    The main aim of Prince Shri Venkateshwara Padmavathy Engineering College is to meet the challenges and aspirations of society
-                                    and nation and to realize the vision of the founder Chairman Dr. K. Vasudevan.
-                                </p>
-                            </div>
-                            <div>
-                                <h4 className="font-bold text-lg mb-2 text-dark">Mission</h4>
-                                <p className="text-sm">
-                                    To provide goal-oriented, quality-based and value-added education through state-of-the-art technologies and methodologies.
-                                </p>
-                            </div>
-                        </div>
+                        <p className="mb-4">
+                            The institutions on the KRS Campus are known for the quality education they impart and their stringent levels of discipline. We have consistently outshone all our peers, not only in academics, but in co-curricular activities as well.
+                        </p>
+                        <p>
+                            We are dedicated to imparting Engineering education to young men and women, grooming their overall personality with the highest emphasis on ethical values and honing them to face the challenges of the industry and the nation at large.
+                        </p>
                     </div>
                 </section>
             </div>

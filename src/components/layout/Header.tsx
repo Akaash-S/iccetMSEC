@@ -11,38 +11,25 @@ const navLinks = [
         name: "About",
         href: "/about",
         dropdown: [
-            { name: "About ICCET 2026", href: "/about" },
-            { name: "About PSVPEC", href: "/about#psvpec" },
-            { name: "Gallery (2012-2025)", href: "/gallery" },
+            { name: "About ICTAGI", href: "/about" },
+            { name: "About MSEC", href: "/about#msec" },
         ],
     },
     {
         name: "Call for Papers",
         href: "/call-for-papers",
     },
-    { name: "Program Committee", href: "/program-committee" },
-    { name: "Speakers", href: "/speakers" },
+    { name: "Committee", href: "/program-committee" },
+    { name: "Important Dates", href: "/#dates" },
     {
-        name: "Paper Submission",
-        href: "/paper-submission",
+        name: "Registration",
+        href: "/registration",
         dropdown: [
-            { name: "Registration Process", href: "/registration" },
-            { name: "Submission Guidelines", href: "/paper-submission#guidelines" },
-            { name: "Template Downloads", href: "/paper-submission#templates" },
+            { name: "Registration Fees", href: "/registration" },
+            { name: "Submission Guidelines", href: "/paper-submission" },
         ],
     },
-    { name: "Accepted Papers", href: "/accepted-papers" },
-    {
-        name: "Journal Publications",
-        href: "/journal-publications",
-        dropdown: [
-            { name: "Journal List", href: "/journal-publications" },
-            { name: "Previous Year Publications", href: "/journal-publications#previous" },
-            { name: "Publication Options", href: "/journal-publications#options" },
-        ],
-    },
-    { name: "FAQ", href: "/faq" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Contact", href: "/contact" },
 ];
 
 export function Header() {
@@ -60,16 +47,16 @@ export function Header() {
 
     return (
         <>
-            {/* Top Publication Banner */}
-            <div className="bg-gray-100 border-b border-gray-200 py-2 overflow-hidden items-center hidden md:flex">
-                <div className="container mx-auto flex items-center">
-                    <span className="bg-primary text-white text-xs font-bold px-2 py-1 rounded mr-3 shrink-0 uppercase tracking-wider">
-                        Publications in:
-                    </span>
-                    <div className="overflow-hidden relative flex-1 h-6">
-                        <p className="animate-marquee whitespace-nowrap absolute text-sm text-gray-700 font-medium">
-                            All Registered papers of 'ICCET' will be published in Scopus Journal - Scopus Book Chapter - Web of Science - SCI - ESCIE - UGC - Annexure 1 & 2
-                        </p>
+            {/* Top Banner */}
+            <div className="bg-dark text-white py-2 overflow-hidden items-center hidden md:flex border-b border-white/10">
+                <div className="container mx-auto flex items-center justify-between text-xs px-4">
+                    <div className="flex gap-4">
+                        <span>Scan QR to Register</span>
+                        <span>|</span>
+                        <span>ictagi@msec.edu.in</span>
+                    </div>
+                    <div className="flex gap-4">
+                        <span>Meenakshi Sundararajan Engineering College</span>
                     </div>
                 </div>
             </div>
@@ -82,13 +69,14 @@ export function Header() {
             >
                 <div className="container mx-auto px-4 flex justify-between items-center">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2 group">
+                    <Link href="/" className="flex items-center gap-3 group">
+                        {/* Optional: Add Logo Image Here */}
                         <div className="flex flex-col">
-                            <span className="text-2xl font-bold text-secondary group-hover:text-primary transition-colors">
-                                14th ICCET
+                            <span className="text-2xl font-bold text-dark group-hover:text-primary transition-colors tracking-tight">
+                                ICTAGI <span className="text-primary">2026</span>
                             </span>
-                            <span className="text-sm font-semibold text-primary tracking-widest">
-                                2026
+                            <span className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest leading-tight">
+                                Transformative AI for Global Impact
                             </span>
                         </div>
                     </Link>
@@ -140,7 +128,7 @@ export function Header() {
                             href="/registration"
                             className="px-5 py-2 bg-primary text-white text-sm font-bold rounded-full hover:bg-orange-600 transition-all shadow-lg hover:shadow-orange-200"
                         >
-                            Register
+                            Register Now
                         </Link>
                     </nav>
 
@@ -172,8 +160,8 @@ export function Header() {
                             onClick={(e) => e.stopPropagation()}
                         >
                             <div className="flex justify-between items-center mb-8">
-                                <span className="text-xl font-bold text-secondary">
-                                    ICCET 2026
+                                <span className="text-xl font-bold text-dark">
+                                    ICTAGI 2026
                                 </span>
                                 <button
                                     onClick={() => setMobileMenuOpen(false)}
