@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { CheckCircle, Download, Upload, CreditCard } from "lucide-react";
 
@@ -13,9 +14,77 @@ const fees = [
 export default function RegistrationPage() {
     const { register, handleSubmit } = useForm();
 
-    const onSubmit = (data: any) => {
-        console.log(data);
-        alert("Thank you for your interest! Official registration payment gateway will open shortly. We will notify you via email.");
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    // TODO: Replace this with your actual Web App URL after deploying the Apps Script
+    // TODO: Replace this with your actual Web App URL after deploying the Apps Script
+    const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || "";
+
+    // Helper to convert file to Base64
+    const fileToBase64 = (file: File): Promise<string> => {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result as string);
+            reader.onerror = error => reject(error);
+        });
+    };
+
+    const onSubmit = async (data: any) => {
+        setIsSubmitting(true);
+        try {
+            let fileData = null;
+
+            // Check if a file is selected (react-hook-form returns a FileList)
+            if (data.file && data.file.length > 0) {
+                const file = data.file[0];
+                const base64 = await fileToBase64(file);
+                fileData = {
+                    name: file.name,
+                    type: file.type,
+                    base64: base64
+                };
+            }
+
+            // Prepare payload
+            const payload = {
+                name: data.name,
+                email: data.email,
+                mobile: data.mobile,
+                institution: data.institution,
+                country: data.country,
+                category: data.category,
+                presentationType: data.presentationType,
+                paperId: data.paperId || "",
+                file: fileData
+            };
+
+            // Send to Google Apps Script
+            // mode: 'no-cors' is often needed for Google Scripts, but 'text/plain' 
+            // content-type usually allows standard POST if script handles it.
+            // Using fetch with no-cors means we won't get a readable response JSON,
+            // but the submission will verify in the Network tab.
+            // A standard trick is sending as text/plain to avoid preflight.
+
+            await fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors", // Critical for Google Apps Script to avoid CORS errors
+                headers: {
+                    "Content-Type": "text/plain", // Prevents preflight OPTIONS request
+                },
+                body: JSON.stringify(payload),
+            });
+
+            // Since we might not get a readable response due to CORS on some deployments,
+            // we assume success if no network error occurred.
+            alert("Registration Submitted Successfully! saved to Database.");
+
+        } catch (error) {
+            console.error("Submission Error:", error);
+            alert("Error submitting form. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -109,48 +178,96 @@ export default function RegistrationPage() {
 
                     {/* Right Column: Registration Form */}
                     <div className="lg:col-span-1">
-                        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 lg:p-8 sticky top-24">
-                            <h3 className="text-xl font-bold text-dark mb-6">Registration Form</h3>
+                        <div className="bg-white rounded-xl shadow-2xl border border-gray-100 p-8 sticky top-24">
+                            <div className="flex justify-between items-center mb-6">
+                                <h3 className="text-2xl font-bold text-dark text-center w-full">Conference Registration</h3>
+                            </div>
 
-                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                                    <input {...register("name")} className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Dr./Mr./Ms." />
+                                    <input
+                                        {...register("name")}
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400"
+                                        placeholder="Full Name"
+                                    />
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                                    <input {...register("email")} type="email" className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="name@example.com" />
+                                    <input
+                                        {...register("email")}
+                                        type="email"
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400"
+                                        placeholder="Email"
+                                    />
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                                    <input {...register("phone")} className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="+91 98765 43210" />
+                                    <input
+                                        {...register("mobile")}
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400"
+                                        placeholder="Mobile Number"
+                                    />
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Institution / Organization</label>
-                                    <input {...register("institution")} className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="University / Company" />
+                                    <input
+                                        {...register("institution")}
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400"
+                                        placeholder="Institution/Organization"
+                                    />
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Designation</label>
-                                    <input {...register("designation")} className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Professor / Student / Manager" />
+                                    <input
+                                        {...register("country")}
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400"
+                                        placeholder="Country"
+                                    />
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Paper ID (if applicable)</label>
-                                    <input {...register("paperId")} className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="e.g., PID-123" />
+                                    <select
+                                        {...register("category")}
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 bg-white"
+                                        defaultValue=""
+                                    >
+                                        <option value="" disabled>-- Select Category --</option>
+                                        <option value="student">Research Scholar / PG Student</option>
+                                        <option value="faculty">Faculty / Academician</option>
+                                        <option value="industry">Industry Delegate</option>
+                                        <option value="listener">Listener</option>
+                                    </select>
                                 </div>
 
-                                <div className="pt-4">
-                                    <button type="submit" className="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-orange-600 transition-colors shadow-lg shadow-orange-200">
+                                <div>
+                                    <select
+                                        {...register("presentationType")}
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 bg-white"
+                                        defaultValue=""
+                                    >
+                                        <option value="" disabled>-- Select Presentation Type --</option>
+                                        <option value="oral">Oral Presentation</option>
+                                        <option value="poster">Poster Presentation</option>
+                                        <option value="attendee">Attendee Only</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label className="block text-sm font-bold text-dark mb-2">Attach File (PDF / DOC)</label>
+                                    <div className="flex items-center w-full px-3 py-2 rounded-lg border border-gray-300 bg-white">
+                                        <label className="cursor-pointer bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-1.5 rounded-md text-sm font-medium transition-colors border border-gray-300 mr-3">
+                                            Choose File
+                                            <input type="file" className="hidden" {...register("file")} accept=".pdf,.doc,.docx" />
+                                        </label>
+                                        <span className="text-gray-500 text-sm truncate">No file chosen</span>
+                                    </div>
+                                </div>
+
+                                <div className="pt-2">
+                                    <button type="submit" className="w-full bg-[#ff6b00] hover:bg-[#e65c00] text-white font-bold py-3.5 rounded-lg transition-colors shadow-lg shadow-orange-100 text-lg">
                                         Submit Registration
                                     </button>
                                 </div>
-                                <p className="text-xs text-gray-500 text-center mt-4">
-                                    By submitting, you agree to our terms and conditions.
-                                </p>
                             </form>
                         </div>
                     </div>

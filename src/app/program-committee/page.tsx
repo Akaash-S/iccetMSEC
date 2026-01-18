@@ -1,77 +1,85 @@
 import { User } from "lucide-react";
 
-const committee = [
-    {
-        role: "Chief Patrons",
-        members: [
-            { name: "Dr. K. S. Lakshmi", title: "Correspondent, MSEC" },
-            { name: "Prof. N. Sreekanth", title: "Secretary, MSEC" },
-            { name: "Prof. U. Deepa", title: "Director, MSEC" }
-        ]
-    },
-    {
-        role: "Patrons",
-        members: [
-            { name: "Dr. S. V. Saravanan", title: "Principal, MSEC" },
-            { name: "Dr. Poongothai", title: "Dean-Research, MSEC" }
-        ]
-    },
-    {
-        role: "Conference Chair",
-        members: [
-            { name: "Dr. R. Arivazhagan", title: "Head-Research, MSEC", contact: "9003116690" }
-        ]
-    },
-    {
-        role: "Conference Co-Chairs",
-        members: [
-            { name: "Dr. V.J. Arul Karthick", title: "Dean-IQAC, MSEC" },
-            { name: "Dr. S.B. Sivasubramaniyan", title: "AP, EEE, MSEC" },
-            { name: "Mr. Mohan Raj Vijayan", title: "AP, IT, MSEC", contact: "7358058584" }
-        ]
-    },
-    {
-        role: "Advisory Committee",
-        isSimpleList: true,
-        members: [
-            { name: "Prof. P.S. Neelakanta", title: "Florida Atlantic University, USA" },
-            { name: "Dr. Yu Kok Hwa", title: "Universiti Sains Malaysia, Malaysia" },
-            { name: "Dr. Michael Benedikt", title: "University of Oxford, UK" },
-            { name: "Dr. D. Ranjith Kumar", title: "Silesian University of Technology (SUT), Poland" },
-            { name: "Dr. M. Ramalakshmi", title: "Universtiy of Technology and Applied Sciences, Muscat" },
-            { name: "Dr. K. Shankar", title: "Adama Science and Technology Universiti, Ethiopia" },
-            { name: "Dr. Sylvain Schmitz", title: "Université Paris Cité, France" },
-            { name: "Dr. Hans Van Ditmarsch", title: "University of Toulouse, France" },
-            { name: "Dr. Bala Dhadayuthabani", title: "Shinas College of Technology, Sultanate of Oman" },
-            { name: "Dr. S. Swamynathan", title: "CEG, Anna University, Chennai, India" },
-            { name: "Dr. Deepanraj Balakrishnan", title: "Prince Mohammad Bin Fahd University, Saudi Arabia" },
-            { name: "Dr. Navaneethan C. Arjuman", title: "Multimedia University, Malaysia" },
-            { name: "Prof. Anantha Chandrakasan", title: "Massachusetts Institute of Technology, USA" },
-            { name: "Prof. Samuel Paikowsky", title: "Francis College of Engineering, USA" },
-            { name: "Dr. Sophie Pinchinat", title: "IRISA/INRIA Research laboratory" }
-        ]
-    },
-    {
-        role: "Technical Committee",
-        isSimpleList: true,
-        members: [
-            { name: "Dr. Sujata Mandal", title: "CSIR - CLRI, Chennai, India" },
-            { name: "Dr. V. JothiPrakash", title: "Indian Institute of Technology Bombay, Mumbai, India" },
-            { name: "Dr. S. Sridhar", title: "Anna University, Chennai, India" },
-            { name: "Dr. Ranjani Parthasarathi", title: "Anna University, Chennai, (Retd.), India" },
-            { name: "Dr. S. Anbuchelian", title: "Anna University, Chennai, India" },
-            { name: "Dr. Rajeswari Sridhar", title: "National Institute of Technology, Trichy, India" },
-            { name: "Dr. Kuzhathaivel", title: "NITTTR, Chennai, India" },
-            { name: "Dr. K. Senthilkumaran", title: "IIITDM, Kancheepuram, India" },
-            { name: "Dr. V. Ponnusamy", title: "Madras Institute of Technology, Chennai, India" },
-            { name: "Dr. Muthuraman", title: "University of Madras, Guindy Campus, Chennai, India" },
-            { name: "Dr. V. Meeakshishundaram", title: "Meenakshi college for Women, Chennai, India" },
-            { name: "Dr. K. Sridhar", title: "SASTRA University, Thanjavur, India" },
-            { name: "Dr. K. S. Ravichandran", title: "Amritha University, Coimbatore, India" },
-            { name: "Dr. Vijayendra Babu", title: "Vellore Institute of Technology, Vellore, India" }
-        ]
-    }
-];
+const committee: {
+    role: string;
+    isSimpleList?: boolean;
+    members: {
+        name: string;
+        title: string;
+        contact?: string;
+    }[];
+}[] = [
+        {
+            role: "Chief Patrons",
+            members: [
+                { name: "Dr. K. S. Lakshmi", title: "Correspondent, MSEC" },
+                { name: "Prof. N. Sreekanth", title: "Secretary, MSEC" },
+                { name: "Prof. U. Deepa", title: "Director, MSEC" }
+            ]
+        },
+        {
+            role: "Patrons",
+            members: [
+                { name: "Dr. S. V. Saravanan", title: "Principal, MSEC" },
+                { name: "Dr. Poongothai", title: "Dean-Research, MSEC" }
+            ]
+        },
+        {
+            role: "Conference Chair",
+            members: [
+                { name: "Dr. R. Arivazhagan", title: "Head-Research, MSEC", contact: "9003116690" }
+            ]
+        },
+        {
+            role: "Conference Co-Chairs",
+            members: [
+                { name: "Dr. V.J. Arul Karthick", title: "Dean-IQAC, MSEC" },
+                { name: "Dr. S.B. Sivasubramaniyan", title: "AP, EEE, MSEC" },
+                { name: "Mr. Mohan Raj Vijayan", title: "AP, IT, MSEC", contact: "7358058584" }
+            ]
+        },
+        {
+            role: "Advisory Committee",
+            isSimpleList: true,
+            members: [
+                { name: "Prof. P.S. Neelakanta", title: "Florida Atlantic University, USA" },
+                { name: "Dr. Yu Kok Hwa", title: "Universiti Sains Malaysia, Malaysia" },
+                { name: "Dr. Michael Benedikt", title: "University of Oxford, UK" },
+                { name: "Dr. D. Ranjith Kumar", title: "Silesian University of Technology (SUT), Poland" },
+                { name: "Dr. M. Ramalakshmi", title: "Universtiy of Technology and Applied Sciences, Muscat" },
+                { name: "Dr. K. Shankar", title: "Adama Science and Technology Universiti, Ethiopia" },
+                { name: "Dr. Sylvain Schmitz", title: "Université Paris Cité, France" },
+                { name: "Dr. Hans Van Ditmarsch", title: "University of Toulouse, France" },
+                { name: "Dr. Bala Dhadayuthabani", title: "Shinas College of Technology, Sultanate of Oman" },
+                { name: "Dr. S. Swamynathan", title: "CEG, Anna University, Chennai, India" },
+                { name: "Dr. Deepanraj Balakrishnan", title: "Prince Mohammad Bin Fahd University, Saudi Arabia" },
+                { name: "Dr. Navaneethan C. Arjuman", title: "Multimedia University, Malaysia" },
+                { name: "Prof. Anantha Chandrakasan", title: "Massachusetts Institute of Technology, USA" },
+                { name: "Prof. Samuel Paikowsky", title: "Francis College of Engineering, USA" },
+                { name: "Dr. Sophie Pinchinat", title: "IRISA/INRIA Research laboratory" }
+            ]
+        },
+        {
+            role: "Technical Committee",
+            isSimpleList: true,
+            members: [
+                { name: "Dr. Sujata Mandal", title: "CSIR - CLRI, Chennai, India" },
+                { name: "Dr. V. JothiPrakash", title: "Indian Institute of Technology Bombay, Mumbai, India" },
+                { name: "Dr. S. Sridhar", title: "Anna University, Chennai, India" },
+                { name: "Dr. Ranjani Parthasarathi", title: "Anna University, Chennai, (Retd.), India" },
+                { name: "Dr. S. Anbuchelian", title: "Anna University, Chennai, India" },
+                { name: "Dr. Rajeswari Sridhar", title: "National Institute of Technology, Trichy, India" },
+                { name: "Dr. Kuzhathaivel", title: "NITTTR, Chennai, India" },
+                { name: "Dr. K. Senthilkumaran", title: "IIITDM, Kancheepuram, India" },
+                { name: "Dr. V. Ponnusamy", title: "Madras Institute of Technology, Chennai, India" },
+                { name: "Dr. Muthuraman", title: "University of Madras, Guindy Campus, Chennai, India" },
+                { name: "Dr. V. Meeakshishundaram", title: "Meenakshi college for Women, Chennai, India" },
+                { name: "Dr. K. Sridhar", title: "SASTRA University, Thanjavur, India" },
+                { name: "Dr. K. S. Ravichandran", title: "Amritha University, Coimbatore, India" },
+                { name: "Dr. Vijayendra Babu", title: "Vellore Institute of Technology, Vellore, India" }
+            ]
+        }
+    ];
 
 export default function ProgramCommitteePage() {
     return (
