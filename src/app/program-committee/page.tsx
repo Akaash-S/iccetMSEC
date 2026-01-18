@@ -27,15 +27,16 @@ const committee: {
         {
             role: "Conference Chair",
             members: [
-                { name: "Dr. R. Arivazhagan", title: "Head-Research, MSEC", contact: "9003116690" }
+                { name: "Dr. R. Arivazhagan", title: "Head-Research, MSEC", contact: "9003116690" },
+                { name: "Dr. V.J. Arul Karthick", title: "Dean-IQAC, MSEC" }
             ]
         },
         {
             role: "Conference Co-Chairs",
             members: [
-                { name: "Dr. V.J. Arul Karthick", title: "Dean-IQAC, MSEC" },
-                { name: "Dr. S.B. Sivasubramaniyan", title: "AP, EEE, MSEC" },
-                { name: "Mr. Mohan Raj Vijayan", title: "AP, IT, MSEC", contact: "7358058584" }
+                // { name: "Dr. V.J. Arul Karthick", title: "Dean-IQAC, MSEC" },
+                { name: "Mr. Mohan Raj Vijayan", title: "Assistant Professor, IT, MSEC", contact: "7358058584" },
+                { name: "Dr. S. Sowmya", title: "Associate Professor" },
             ]
         },
         {
