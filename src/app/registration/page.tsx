@@ -12,8 +12,11 @@ const fees = [
 ];
 
 export default function RegistrationPage() {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [isSubmitting, setIsSubmitting] = useState(false);
+
+    // Watch the file input to show selected filename
+    const watchedFile = watch("file");
 
     // TODO: Replace this with your actual Web App URL after deploying the Apps Script
     // TODO: Replace this with your actual Web App URL after deploying the Apps Script
@@ -69,7 +72,7 @@ export default function RegistrationPage() {
             });
 
             alert("Registration Submitted Successfully! saved to Database.");
-            
+
         } catch (error) {
             console.error("Submission Error:", error);
             alert("Error submitting form. Please try again.");
@@ -186,7 +189,7 @@ export default function RegistrationPage() {
 
                                 <div>
                                     <input
-                                        {...register("email", { 
+                                        {...register("email", {
                                             required: "Email is required",
                                             pattern: { value: /^\S+@\S+$/i, message: "Invalid email format" }
                                         })}
@@ -258,14 +261,16 @@ export default function RegistrationPage() {
                                     <div className={`flex items-center w-full px-3 py-2 rounded-lg border ${errors.file ? 'border-red-500' : 'border-gray-300'} bg-white`}>
                                         <label className="cursor-pointer bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-1.5 rounded-md text-sm font-medium transition-colors border border-gray-300 mr-3">
                                             Choose File
-                                            <input 
-                                                type="file" 
-                                                className="hidden" 
-                                                {...register("file", { required: "Please attach a file" })} 
-                                                accept=".pdf,.doc,.docx" 
+                                            <input
+                                                type="file"
+                                                className="hidden"
+                                                {...register("file", { required: "Please attach a file" })}
+                                                accept=".pdf,.doc,.docx"
                                             />
                                         </label>
-                                        <span className="text-gray-500 text-sm truncate">No file chosen</span>
+                                        <span className="text-gray-500 text-sm truncate">
+                                            {watchedFile && watchedFile.length > 0 ? watchedFile[0].name : "No file chosen"}
+                                        </span>
                                     </div>
                                     {errors.file && <p className="text-red-500 text-xs mt-1">{String(errors.file.message)}</p>}
                                 </div>
