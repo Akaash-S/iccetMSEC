@@ -12,8 +12,7 @@ const fees = [
 ];
 
 export default function RegistrationPage() {
-    const { register, handleSubmit } = useForm();
-
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     // TODO: Replace this with your actual Web App URL after deploying the Apps Script
@@ -60,25 +59,17 @@ export default function RegistrationPage() {
             };
 
             // Send to Google Apps Script
-            // mode: 'no-cors' is often needed for Google Scripts, but 'text/plain' 
-            // content-type usually allows standard POST if script handles it.
-            // Using fetch with no-cors means we won't get a readable response JSON,
-            // but the submission will verify in the Network tab.
-            // A standard trick is sending as text/plain to avoid preflight.
-
             await fetch(GOOGLE_SCRIPT_URL, {
                 method: "POST",
-                mode: "no-cors", // Critical for Google Apps Script to avoid CORS errors
+                mode: "no-cors",
                 headers: {
-                    "Content-Type": "text/plain", // Prevents preflight OPTIONS request
+                    "Content-Type": "text/plain",
                 },
                 body: JSON.stringify(payload),
             });
 
-            // Since we might not get a readable response due to CORS on some deployments,
-            // we assume success if no network error occurred.
             alert("Registration Submitted Successfully! saved to Database.");
-
+            
         } catch (error) {
             console.error("Submission Error:", error);
             alert("Error submitting form. Please try again.");
@@ -186,81 +177,97 @@ export default function RegistrationPage() {
                             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                                 <div>
                                     <input
-                                        {...register("name")}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400"
-                                        placeholder="Full Name"
+                                        {...register("name", { required: "Full name is required" })}
+                                        className={`w-full px-4 py-3 rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-300'} focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400`}
+                                        placeholder="Full Name *"
                                     />
+                                    {errors.name && <p className="text-red-500 text-xs mt-1">{String(errors.name.message)}</p>}
                                 </div>
 
                                 <div>
                                     <input
-                                        {...register("email")}
+                                        {...register("email", { 
+                                            required: "Email is required",
+                                            pattern: { value: /^\S+@\S+$/i, message: "Invalid email format" }
+                                        })}
                                         type="email"
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400"
-                                        placeholder="Email"
+                                        className={`w-full px-4 py-3 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400`}
+                                        placeholder="Email *"
                                     />
+                                    {errors.email && <p className="text-red-500 text-xs mt-1">{String(errors.email.message)}</p>}
                                 </div>
 
                                 <div>
                                     <input
-                                        {...register("mobile")}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400"
-                                        placeholder="Mobile Number"
+                                        {...register("mobile", { required: "Mobile number is required" })}
+                                        className={`w-full px-4 py-3 rounded-lg border ${errors.mobile ? 'border-red-500' : 'border-gray-300'} focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400`}
+                                        placeholder="Mobile Number *"
                                     />
+                                    {errors.mobile && <p className="text-red-500 text-xs mt-1">{String(errors.mobile.message)}</p>}
                                 </div>
 
                                 <div>
                                     <input
-                                        {...register("institution")}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400"
-                                        placeholder="Institution/Organization"
+                                        {...register("institution", { required: "Institution is required" })}
+                                        className={`w-full px-4 py-3 rounded-lg border ${errors.institution ? 'border-red-500' : 'border-gray-300'} focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400`}
+                                        placeholder="Institution/Organization *"
                                     />
+                                    {errors.institution && <p className="text-red-500 text-xs mt-1">{String(errors.institution.message)}</p>}
                                 </div>
 
                                 <div>
                                     <input
-                                        {...register("country")}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400"
-                                        placeholder="Country"
+                                        {...register("country", { required: "Country is required" })}
+                                        className={`w-full px-4 py-3 rounded-lg border ${errors.country ? 'border-red-500' : 'border-gray-300'} focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400`}
+                                        placeholder="Country *"
                                     />
+                                    {errors.country && <p className="text-red-500 text-xs mt-1">{String(errors.country.message)}</p>}
                                 </div>
 
                                 <div>
                                     <select
-                                        {...register("category")}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 bg-white"
+                                        {...register("category", { required: "Category is required" })}
+                                        className={`w-full px-4 py-3 rounded-lg border ${errors.category ? 'border-red-500' : 'border-gray-300'} focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 bg-white`}
                                         defaultValue=""
                                     >
-                                        <option value="" disabled>-- Select Category --</option>
+                                        <option value="" disabled>-- Select Category * --</option>
                                         <option value="student">Research Scholar / PG Student</option>
                                         <option value="faculty">Faculty / Academician</option>
                                         <option value="industry">Industry Delegate</option>
                                         <option value="listener">Listener</option>
                                     </select>
+                                    {errors.category && <p className="text-red-500 text-xs mt-1">{String(errors.category.message)}</p>}
                                 </div>
 
                                 <div>
                                     <select
-                                        {...register("presentationType")}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 bg-white"
+                                        {...register("presentationType", { required: "Presentation type is required" })}
+                                        className={`w-full px-4 py-3 rounded-lg border ${errors.presentationType ? 'border-red-500' : 'border-gray-300'} focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-gray-700 bg-white`}
                                         defaultValue=""
                                     >
-                                        <option value="" disabled>-- Select Presentation Type --</option>
+                                        <option value="" disabled>-- Select Presentation Type * --</option>
                                         <option value="oral">Oral Presentation</option>
                                         <option value="poster">Poster Presentation</option>
                                         <option value="attendee">Attendee Only</option>
                                     </select>
+                                    {errors.presentationType && <p className="text-red-500 text-xs mt-1">{String(errors.presentationType.message)}</p>}
                                 </div>
 
                                 <div>
                                     <label className="block text-sm font-bold text-dark mb-2">Attach File (PDF / DOC)</label>
-                                    <div className="flex items-center w-full px-3 py-2 rounded-lg border border-gray-300 bg-white">
+                                    <div className={`flex items-center w-full px-3 py-2 rounded-lg border ${errors.file ? 'border-red-500' : 'border-gray-300'} bg-white`}>
                                         <label className="cursor-pointer bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-1.5 rounded-md text-sm font-medium transition-colors border border-gray-300 mr-3">
                                             Choose File
-                                            <input type="file" className="hidden" {...register("file")} accept=".pdf,.doc,.docx" />
+                                            <input 
+                                                type="file" 
+                                                className="hidden" 
+                                                {...register("file", { required: "Please attach a file" })} 
+                                                accept=".pdf,.doc,.docx" 
+                                            />
                                         </label>
                                         <span className="text-gray-500 text-sm truncate">No file chosen</span>
                                     </div>
+                                    {errors.file && <p className="text-red-500 text-xs mt-1">{String(errors.file.message)}</p>}
                                 </div>
 
                                 <div className="pt-2">
