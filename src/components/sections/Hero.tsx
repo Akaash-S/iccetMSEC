@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Sparkles } from "lucide-react";
 
@@ -101,41 +102,24 @@ export function Hero() {
 
                     {/* Partner Logos Strip */}
                     <div className="mt-16 pt-8 border-t border-white/10">
-                        <p className="text-xs text-gray-500 uppercase tracking-widest mb-4">Supported By</p>
-                        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80 hover:opacity-100 transition-opacity duration-300 bg-white/5 py-6 px-8 rounded-2xl backdrop-blur-sm border border-white/5">
-                            {/* ISRO */}
-                            <div className="bg-white p-2 rounded h-12 w-auto flex items-center justify-center">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Indian_Space_Research_Organisation_Logo.svg" alt="ISRO" className="h-full w-auto object-contain" />
-                            </div>
+                        <p className="text-xs text-gray-500 uppercase tracking-widest mb-6">Supported By</p>
+                        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-10 opacity-90 bg-white/5 py-8 px-6 rounded-2xl backdrop-blur-sm border border-white/5">
 
-                            {/* NIELIT */}
-                            <div className="bg-white p-2 rounded h-12 w-auto flex items-center justify-center">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/National_Institute_of_Electronics_%26_Information_Technology_logo.png/220px-National_Institute_of_Electronics_%26_Information_Technology_logo.png" alt="NIELIT" className="h-full w-auto object-contain" />
-                            </div>
-
-                            {/* C-DAC */}
-                            <div className="bg-white p-2 rounded h-12 w-auto flex items-center justify-center">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/C-DAC_Logo.png" alt="C-DAC" className="h-full w-auto object-contain" />
-                            </div>
-
-                            {/* NIOT */}
-                            <div className="bg-white p-2 rounded h-12 w-auto flex items-center justify-center">
-                                <img src="https://www.niot.res.in/niot1/images/niot_logo.png" alt="NIOT" className="h-full w-auto object-contain" />
-                            </div>
-
-                            {/* ZF */}
-                            <div className="bg-white p-2 rounded h-12 w-auto flex items-center justify-center">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/ZF_Friedrichshafen_AG_Logo.svg" alt="ZF" className="h-full w-auto object-contain" />
-                            </div>
-
-                            {/* Virtusa */}
-                            <div className="bg-white p-2 rounded h-12 w-auto flex items-center justify-center">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Virtusa_Logo.svg" alt="Virtusa" className="h-full w-auto object-contain" />
-                            </div>
-
-                            {/* Springer */}
-                            <div className="bg-white p-2 rounded h-12 w-auto flex items-center justify-center">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Springer_Nature_Logo.svg/1024px-Springer_Nature_Logo.svg.png" alt="Springer" className="h-full w-auto object-contain" />
+                            {/* Wrapper for logos to ensure consistent height and alignment */}
+                            <div className="flex flex-wrap justify-center items-center gap-6 w-full">
+                                {[
+                                    "ISRO",
+                                    "NIELIT",
+                                    "C-DAC",
+                                    "NIOT",
+                                    "ZF",
+                                    "Virtusa",
+                                    "Springer"
+                                ].map((name, index) => (
+                                    <div key={index} className="bg-white/90 backdrop-blur px-6 py-3 rounded-xl flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300 border border-white/20">
+                                        <span className="text-gray-900 font-bold text-lg tracking-wide">{name}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
