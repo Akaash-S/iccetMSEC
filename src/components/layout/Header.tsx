@@ -25,7 +25,7 @@ const navLinks = [
         name: "Registration",
         href: "/registration",
         dropdown: [
-            { name: "Registration Fees", href: "/registration" },
+            { name: "Registration Fees", href: "/registration#fees" },
             { name: "Submission Guidelines", href: "/paper-submission" },
         ],
     },

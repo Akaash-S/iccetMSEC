@@ -38,17 +38,37 @@ const committee = [
             { name: "Dr. Yu Kok Hwa", title: "Universiti Sains Malaysia, Malaysia" },
             { name: "Dr. Michael Benedikt", title: "University of Oxford, UK" },
             { name: "Dr. D. Ranjith Kumar", title: "Silesian University of Technology (SUT), Poland" },
+            { name: "Dr. M. Ramalakshmi", title: "Universtiy of Technology and Applied Sciences, Muscat" },
+            { name: "Dr. K. Shankar", title: "Adama Science and Technology Universiti, Ethiopia" },
             { name: "Dr. Sylvain Schmitz", title: "Université Paris Cité, France" },
             { name: "Dr. Hans Van Ditmarsch", title: "University of Toulouse, France" },
+            { name: "Dr. Bala Dhadayuthabani", title: "Shinas College of Technology, Sultanate of Oman" },
+            { name: "Dr. S. Swamynathan", title: "CEG, Anna University, Chennai, India" },
+            { name: "Dr. Deepanraj Balakrishnan", title: "Prince Mohammad Bin Fahd University, Saudi Arabia" },
+            { name: "Dr. Navaneethan C. Arjuman", title: "Multimedia University, Malaysia" },
+            { name: "Prof. Anantha Chandrakasan", title: "Massachusetts Institute of Technology, USA" },
+            { name: "Prof. Samuel Paikowsky", title: "Francis College of Engineering, USA" },
+            { name: "Dr. Sophie Pinchinat", title: "IRISA/INRIA Research laboratory" }
         ]
     },
     {
         role: "Technical Committee",
         isSimpleList: true,
         members: [
-            { name: "Dr. Sujata Mandal", title: "CSIR - CLRI, Chennai" },
-            { name: "Dr. V. JothiPrakash", title: "IIT Bombay" },
-            { name: "Dr. S. Sridhar", title: "Anna University" },
+            { name: "Dr. Sujata Mandal", title: "CSIR - CLRI, Chennai, India" },
+            { name: "Dr. V. JothiPrakash", title: "Indian Institute of Technology Bombay, Mumbai, India" },
+            { name: "Dr. S. Sridhar", title: "Anna University, Chennai, India" },
+            { name: "Dr. Ranjani Parthasarathi", title: "Anna University, Chennai, (Retd.), India" },
+            { name: "Dr. S. Anbuchelian", title: "Anna University, Chennai, India" },
+            { name: "Dr. Rajeswari Sridhar", title: "National Institute of Technology, Trichy, India" },
+            { name: "Dr. Kuzhathaivel", title: "NITTTR, Chennai, India" },
+            { name: "Dr. K. Senthilkumaran", title: "IIITDM, Kancheepuram, India" },
+            { name: "Dr. V. Ponnusamy", title: "Madras Institute of Technology, Chennai, India" },
+            { name: "Dr. Muthuraman", title: "University of Madras, Guindy Campus, Chennai, India" },
+            { name: "Dr. V. Meeakshishundaram", title: "Meenakshi college for Women, Chennai, India" },
+            { name: "Dr. K. Sridhar", title: "SASTRA University, Thanjavur, India" },
+            { name: "Dr. K. S. Ravichandran", title: "Amritha University, Coimbatore, India" },
+            { name: "Dr. Vijayendra Babu", title: "Vellore Institute of Technology, Vellore, India" }
         ]
     }
 ];
