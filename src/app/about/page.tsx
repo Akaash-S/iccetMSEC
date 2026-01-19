@@ -85,56 +85,55 @@ export default function AboutPage() {
                                 {[
                                     // Temples
                                     {
-                                        src: "/images/chennai/vadapalani_temple.jpg",
+                                        src: "/images/chennai/vadapalani_temple.png",
                                         title: "Arulmigu Vadapalani Murugan Temple",
                                         caption: "— Major Murugan temple, famous for marriages and festival crowds; near Kodambakkam."
                                     },
                                     {
-                                        src: "/images/chennai/garbarakshambigai.jpg",
+                                        src: "/images/chennai/garbarakshambigai.png",
                                         title: "Sri Vadapalani Garbarakshambigai Temple",
                                         caption: "— Popular for prayers related to childbirth; walkable from many parts of Kodambakkam."
                                     },
                                     {
-                                        src: "/images/chennai/sharadambal.jpg",
+                                        src: "/images/chennai/sharadambal.png",
                                         title: "Sharadambal Temple",
                                         caption: "— Calm temple with a meditation hall, finding a quieter spiritual place inside the locality."
                                     },
                                     // Parks
                                     {
-                                        src: "/images/chennai/chetpet_park.jpg",
+                                        src: "/images/chennai/chetpet_park.png",
                                         title: "Chetpet Eco Park",
                                         caption: "— Lake-side walking/jogging track and boating; 15–20 minutes from Kodambakkam."
                                     },
                                     {
-                                        src: "/images/chennai/panagal_park.jpg",
+                                        src: "/images/chennai/panagal_park.png",
                                         title: "Panagal Park, T. Nagar",
                                         caption: "— Classic green space in a busy shopping hub; nice to sit after shopping."
                                     },
                                     // Cafes
                                     {
-                                        src: "/images/chennai/sankaralaya.jpg",
+                                        src: "/images/chennai/sankaralaya.png",
                                         title: "Sankaralaya Cafe",
                                         caption: "— Budget-friendly pure veg spot on Railway Border Rd; highly rated for South Indian food."
                                     },
                                     {
-                                        src: "/images/chennai/saravana_coffee.jpg",
+                                        src: "/images/chennai/saravana_coffee.png",
                                         title: "Saravana Coffee",
                                         caption: "— Small Akbarabad spot well-known locally for strong filter coffee and snacks."
                                     },
                                     {
-                                        src: "/images/chennai/curly_cravings.jpg",
+                                        src: "/images/chennai/curly_cravings.png",
                                         title: "Curly Cravings",
                                         caption: "— Trendy café on Arcot Rd popular for Maggi-based dishes, fries, and casual hangouts."
                                     }
                                 ].map((item, index) => (
                                     <div key={index} className="group">
                                         <div className="h-48 bg-gray-200 rounded-lg overflow-hidden mb-2 relative">
-                                            {/* Placeholder for actual image */}
-                                            <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-100">
-                                                <span className="text-sm font-medium text-center px-4">Image: {item.title}</span>
-                                            </div>
-                                            {/* Uncomment below when images are added */}
-                                            {/* <img src={item.src} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /> */}
+                                            <img
+                                                src={item.src}
+                                                alt={item.title}
+                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                            />
                                         </div>
                                         <div>
                                             <h4 className="font-bold text-gray-900 text-lg leading-tight mb-1">{item.title}</h4>
