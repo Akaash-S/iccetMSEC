@@ -7,10 +7,18 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <div className="pt-10 pb-20">
-            <header className="bg-gray-100 py-20 mb-12">
-                <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl font-bold font-heading text-dark mb-4">About ICTAGI 2026</h1>
-                    <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+            <header className="relative bg-gray-900 py-24 mb-12 overflow-hidden">
+                <div className="absolute inset-0">
+                    <img
+                        src="/images/about_header_bg.png"
+                        alt="AI Background"
+                        className="w-full h-full object-cover opacity-60"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
+                </div>
+                <div className="container mx-auto px-4 text-center relative z-10">
+                    <h1 className="text-4xl md:text-5xl font-bold font-heading text-white mb-4">About ICTAGI 2026</h1>
+                    <div className="w-24 h-1.5 bg-primary mx-auto rounded-full shadow-lg shadow-orange-500/50"></div>
                 </div>
             </header>
 
