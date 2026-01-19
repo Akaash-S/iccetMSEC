@@ -75,24 +75,61 @@ export default function AboutPage() {
                             {/* Image Grid with Captions */}
                             <div className="grid md:grid-cols-2 gap-6 mb-10">
                                 {[
-                                    { src: "/images/chennai/marina.jpg", title: "Marina Beach", caption: "— Iconic coastline and the second longest urban beach in the world." },
-                                    { src: "/images/chennai/temple.jpg", title: "Kapaleeshwarar Temple", caption: "— Masterpiece of Dravidian architecture in Mylapore." },
-                                    { src: "/images/chennai/fort.jpg", title: "Fort St. George", caption: "— The first English fortress in India, housing the Secretariat." },
-                                    { src: "/images/chennai/station.jpg", title: "Chennai Central", caption: "— Historic colonial-era landmark blending Gothic and Romanesque styles." },
-                                    { src: "/images/chennai/tidel.jpg", title: "Tidel Park", caption: "— A symbol of the city's booming IT corridor and modern economy." },
-                                    { src: "/images/chennai/mahabs.jpg", title: "Mahabalipuram", caption: "— UNESCO World Heritage site known for ancient rock-cut temples (nearby)." }
+                                    // Temples
+                                    {
+                                        src: "/images/chennai/vadapalani_temple.jpg",
+                                        title: "Arulmigu Vadapalani Murugan Temple",
+                                        caption: "— Major Murugan temple, famous for marriages and festival crowds; near Kodambakkam."
+                                    },
+                                    {
+                                        src: "/images/chennai/garbarakshambigai.jpg",
+                                        title: "Sri Vadapalani Garbarakshambigai Temple",
+                                        caption: "— Popular for prayers related to childbirth; walkable from many parts of Kodambakkam."
+                                    },
+                                    {
+                                        src: "/images/chennai/sharadambal.jpg",
+                                        title: "Sharadambal Temple",
+                                        caption: "— Calm temple with a meditation hall, finding a quieter spiritual place inside the locality."
+                                    },
+                                    // Parks
+                                    {
+                                        src: "/images/chennai/chetpet_park.jpg",
+                                        title: "Chetpet Eco Park",
+                                        caption: "— Lake-side walking/jogging track and boating; 15–20 minutes from Kodambakkam."
+                                    },
+                                    {
+                                        src: "/images/chennai/panagal_park.jpg",
+                                        title: "Panagal Park, T. Nagar",
+                                        caption: "— Classic green space in a busy shopping hub; nice to sit after shopping."
+                                    },
+                                    // Cafes
+                                    {
+                                        src: "/images/chennai/sankaralaya.jpg",
+                                        title: "Sankaralaya Cafe",
+                                        caption: "— Budget-friendly pure veg spot on Railway Border Rd; highly rated for South Indian food."
+                                    },
+                                    {
+                                        src: "/images/chennai/saravana_coffee.jpg",
+                                        title: "Saravana Coffee",
+                                        caption: "— Small Akbarabad spot well-known locally for strong filter coffee and snacks."
+                                    },
+                                    {
+                                        src: "/images/chennai/curly_cravings.jpg",
+                                        title: "Curly Cravings",
+                                        caption: "— Trendy café on Arcot Rd popular for Maggi-based dishes, fries, and casual hangouts."
+                                    }
                                 ].map((item, index) => (
                                     <div key={index} className="group">
                                         <div className="h-48 bg-gray-200 rounded-lg overflow-hidden mb-2 relative">
                                             {/* Placeholder for actual image */}
                                             <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-100">
-                                                <span className="text-sm font-medium">Image: {item.title}</span>
+                                                <span className="text-sm font-medium text-center px-4">Image: {item.title}</span>
                                             </div>
                                             {/* Uncomment below when images are added */}
                                             {/* <img src={item.src} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /> */}
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-gray-900 text-lg">{item.title} a.k.a Chennai</h4>
+                                            <h4 className="font-bold text-gray-900 text-lg leading-tight mb-1">{item.title}</h4>
                                             <p className="text-gray-600 text-sm italic">{item.caption}</p>
                                         </div>
                                     </div>
