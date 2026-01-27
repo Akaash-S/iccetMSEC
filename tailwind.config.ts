@@ -22,40 +22,43 @@ const config: Config = {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
                 primary: {
-                    DEFAULT: "#F97316", // Orange 500
-                    50: "#FFF7ED",
-                    100: "#FFEDD5",
-                    200: "#FED7AA",
-                    300: "#FDBA74",
-                    400: "#FB923C",
-                    500: "#F97316",
-                    600: "#EA580C",
-                    700: "#C2410C",
-                    800: "#9A3412",
-                    900: "#7C2D12",
+                    DEFAULT: "#3D5975", // Navy Blue
+                    light: "#5A7B9C",   // Lighter Navy
+                    dark: "#2A3E52",    // Darker Navy
+                    50: "#F0F4F8",
+                    100: "#D9E2EC",
+                    200: "#BCCCDC",
+                    300: "#9FB3C8",
+                    400: "#829AB1",
+                    500: "#3D5975",     // Base Primary
+                    600: "#314963",
+                    700: "#26394F",
+                    800: "#1B2A3B",
+                    900: "#101924",
+                },
+                accent: {
+                    DEFAULT: "#E93462", // Red/Pink
+                    hover: "#D12852",
+                    light: "#F58FA6",
                 },
                 secondary: {
-                    DEFAULT: "#22C55E", // Green 500
-                    50: "#F0FDF4",
-                    100: "#DCFCE7",
-                    200: "#BBF7D0",
-                    300: "#86EFAC",
-                    400: "#4ADE80",
-                    500: "#22C55E",
-                    600: "#16A34A",
-                    700: "#15803D",
-                    800: "#166534",
-                    900: "#14532D",
+                    DEFAULT: "#F2C94C", // Gold/Yellow (Highlight)
+                    light: "#F5D575",
                 },
-                dark: {
-                    DEFAULT: "#0F172A", // Slate 900
-                    light: "#334155",   // Slate 700
-                    lighter: "#475569",
+                neutral: {
+                    100: "#F3F4F6",
+                    200: "#E5E7EB",
+                    800: "#1F2937",
+                    900: "#111827",
                 },
-                iccet: {
-                    purple: "#4C1D95",
-                    blue: "#1E3A8A",
-                }
+                destructive: {
+                    DEFAULT: "hsl(var(--destructive))",
+                    foreground: "hsl(var(--destructive-foreground))",
+                },
+                border: "hsl(var(--border))",
+                input: "hsl(var(--input))",
+                ring: "hsl(var(--ring))",
+                dark: "#0B1120", // Deep Navy/Black for backgrounds
             },
             fontFamily: {
                 sans: ["var(--font-inter)", "ui-sans-serif", "system-ui"],
@@ -66,7 +69,6 @@ const config: Config = {
                 "slide-up": "slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
                 "slide-down": "slideDown 0.3s ease-out forwards",
                 marquee: "marquee 30s linear infinite",
-                "spin-slow": "spin 8s linear infinite",
             },
             keyframes: {
                 fadeIn: {
@@ -86,10 +88,6 @@ const config: Config = {
                     "100%": { transform: "translateX(-100%)" },
                 },
             },
-            boxShadow: {
-                'glow': '0 0 20px rgba(249, 115, 22, 0.3)',
-                'glow-lg': '0 0 30px rgba(249, 115, 22, 0.5)',
-            }
         },
     },
     plugins: [],

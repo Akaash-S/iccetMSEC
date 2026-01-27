@@ -6,9 +6,12 @@
   :root {
     --background: #ffffff;
     --foreground: #0F172A;
-    /* Slate 900 for better contrast */
-    --primary: #F97316;
-    --secondary: #22C55E;
+    --primary: #3D5975;
+    /* Navy Blue */
+    --secondary: #F2C94C;
+    /* Gold */
+    --accent: #E93462;
+    /* Red/Pink */
   }
 
   html {
@@ -63,7 +66,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#F97316] to-[#22C55E];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
   }
 
   .text-shadow {

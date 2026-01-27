@@ -1,18 +1,27 @@
 import { Hero } from "@/components/sections/Hero";
 import { AboutSection } from "@/components/sections/AboutSection";
-import { HighlightsSection } from "@/components/sections/HighlightsSection";
-import { ChiefGuestSection } from "@/components/sections/ChiefGuestSection";
-import { ImportantDatesSection } from "@/components/sections/ImportantDatesSection";
+import { KeynoteSpeakersSection } from "@/components/sections/KeynoteSpeakersSection";
+import { AboutCollegeSection } from "@/components/sections/AboutCollegeSection";
+import { CommitteeSection } from "@/components/sections/CommitteeSection";
+import { PublicationsSection } from "@/components/sections/PublicationsSection";
+import { CallForPapersSection } from "@/components/sections/CallForPapersSection";
+import { PaperSubmissionSection } from "@/components/sections/PaperSubmissionSection";
+import { SponsorshipSection } from "@/components/sections/SponsorshipSection";
+import { RegistrationSection } from "@/components/sections/RegistrationSection";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Hero />
       <AboutSection />
-      <HighlightsSection />
-      <ChiefGuestSection />
-      <ImportantDatesSection />
-      {/* Additional sections would be added here */}
+      <KeynoteSpeakersSection />
+      <AboutCollegeSection />
+      <CommitteeSection />
+      <PublicationsSection />
+      <CallForPapersSection />
+      <PaperSubmissionSection />
+      <SponsorshipSection />
+      <RegistrationSection />
     </div>
   );
 }
