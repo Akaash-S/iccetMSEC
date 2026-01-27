@@ -22,16 +22,21 @@ export default function ContactPage() {
                         </p>
 
                         <div className="space-y-6">
-                            <div className="flex items-start gap-4 p-6 bg-white shadow-sm rounded-xl border border-gray-100">
-                                <MapPin className="text-primary shrink-0" size={24} />
+                            <a
+                                href="https://maps.app.goo.gl/K97irhc1SXbj2men6"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-start gap-4 p-6 bg-white shadow-sm rounded-xl border border-gray-100 hover:border-primary/30 transition-colors group cursor-pointer"
+                            >
+                                <MapPin className="text-primary shrink-0 group-hover:animate-bounce" size={24} />
                                 <div>
-                                    <h3 className="font-bold text-gray-800 mb-1">Venue</h3>
+                                    <h3 className="font-bold text-gray-800 mb-1 group-hover:text-primary transition-colors">Venue</h3>
                                     <p className="text-gray-600 text-sm">
                                         Meenakshi Sundararajan Engineering College,<br />
                                         Chennai, India.
                                     </p>
                                 </div>
-                            </div>
+                            </a>
 
                             <div className="flex items-center gap-4 p-6 bg-white shadow-sm rounded-xl border border-gray-100">
                                 <Phone className="text-primary shrink-0" size={24} />

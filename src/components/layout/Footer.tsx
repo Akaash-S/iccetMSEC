@@ -13,7 +13,7 @@ export function Footer() {
                     {/* Left Column: Map */}
                     <div className="w-full lg:w-1/2 h-[400px] bg-gray-800 rounded-xl overflow-hidden relative shadow-lg">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0035676348633!2d80.23785461413516!3d12.924765618456247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525c8c69136971%3A0x62804362a264a78b!2sKCG%20College%20of%20Technology!5e0!3m2!1sen!2sin!4v1614769000000!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.671379762484!2d80.2223833!3d13.0401763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526655a5555555%3A0x6b77e3836791d798!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1700000000000"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
@@ -24,7 +24,7 @@ export function Footer() {
                         ></iframe>
                         <div className="absolute bottom-4 left-4">
                             <a
-                                href="https://goo.gl/maps/genericLink"
+                                href="https://maps.app.goo.gl/K97irhc1SXbj2men6"
                                 target="_blank"
                                 className="inline-flex items-center gap-2 px-4 py-2 bg-white text-primary text-xs font-bold rounded shadow hover:bg-gray-100 transition-colors"
                             >
@@ -49,9 +49,9 @@ export function Footer() {
                                 <div>
                                     <h4 className="text-lg font-bold text-white mb-1">Address</h4>
                                     <p className="leading-relaxed">
-                                        KCG College of Technology,<br />
-                                        KCG Nagar, Rajiv Gandhi Salai,<br />
-                                        Karapakkam, Chennai - 600 097,<br />
+                                        Meenakshi Sundararajan Engineering College,<br />
+                                        363, Arcot Road, Kodambakkam,<br />
+                                        Chennai - 600 024,<br />
                                         Tamil Nadu, India.
                                     </p>
                                 </div>

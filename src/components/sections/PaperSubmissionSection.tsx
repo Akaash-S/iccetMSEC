@@ -64,9 +64,9 @@ export function PaperSubmissionSection() {
                             >
                                 Submit Here
                             </Link>
-                            <a href="mailto:iciati_3@kcgcollege.com" className="flex items-center gap-2 text-accent font-medium hover:underline">
+                            <a href="mailto:ictagi@msec.edu.in" className="flex items-center gap-2 text-accent font-medium hover:underline">
                                 <Mail size={18} />
-                                iciati_3@kcgcollege.com
+                                ictagi@msec.edu.in
                             </a>
                         </div>
 

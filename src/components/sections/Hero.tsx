@@ -107,13 +107,18 @@ export function Hero() {
                                 </div>
                             </div>
 
-                            <div className="flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-colors">
-                                <MapPin className="text-accent w-6 h-6" />
+                            <a
+                                href="https://maps.app.goo.gl/K97irhc1SXbj2men6"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-colors cursor-pointer group"
+                            >
+                                <MapPin className="text-accent w-6 h-6 group-hover:animate-bounce" />
                                 <div className="text-left">
                                     <p className="text-xs text-gray-400 uppercase tracking-wider">Venue</p>
                                     <p className="text-xl font-bold text-white leading-tight">Meenakshi Sundararajan<br />Engineering College, Chennai</p>
                                 </div>
-                            </div>
+                            </a>
                         </motion.div>
 
                         {/* CTA Buttons */}
