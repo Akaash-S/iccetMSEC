@@ -3,22 +3,58 @@
 import { motion } from "framer-motion";
 
 const advisoryCommittee = [
-    { name: "Prof. P.S. Neelakanta", aff: "Florida Atlantic University, USA" },
-    { name: "Dr. Yu Kok Hwa", aff: "Universiti Sains Malaysia, Malaysia" },
-    { name: "Dr. Michael Benedikt", aff: "University of Oxford, UK" },
-    { name: "Dr. D. Ranjith Kumar", aff: "Silesian University of Technology (SUT), Poland" },
-    { name: "Dr. M. Ramalakshmi", aff: "University of Technology and Applied Sciences, Muscat" },
-    { name: "Dr. K. Shankar", aff: "Adama Science and Technology University, Ethiopia" },
-    { name: "Dr. Sylvain Schmitz", aff: "Université Paris Cité, France" },
-    { name: "Dr. Hans Van Ditmarsch", aff: "University of Toulouse, France" },
-    { name: "Dr. Bala Dhadayuthabani", aff: "Shinas College of Technology, Sultanate of Oman" },
-    { name: "Dr. S. Swamynathan", aff: "CEG, Anna University, Chennai, India" },
-    { name: "Dr. Deepanraj Balakrishnan", aff: "Prince Mohammad Bin Fahd University, Saudi Arabia" },
-    { name: "Dr. Navaneethan C. Arjuman", aff: "Multimedia University, Malaysia" },
-    { name: "Prof. Anantha Chandrakasan", aff: "Massachusetts Institute of Technology, USA" },
-    { name: "Prof. Samuel Paikowsky", aff: "Francis College of Engineering, USA" },
-    { name: "Dr. Sophie Pinchinat", aff: "IRISA/INRIA Research laboratory" }
+    {
+        name: "Dr. R Brakaspathy",
+        role: "R&D Advisor",
+        aff: "Indian Institute of Technology, Chennai",
+        email: "rbpathy@gmail.com",
+        phone: "9443412249"
+    },
+    {
+        name: "Dr. Arockia Rajan A",
+        role: "Professor, Department of Applied Mathematics",
+        aff: "IIT Madras, Chennai",
+        email: "aarajan@iitm.ac.in",
+        phone: "9884953470"
+    },
+    {
+        name: "Dr. V. Jothiprakash",
+        role: "Professor (HAG), Department of Civil Engineering",
+        aff: "Indian Institute of Technology Bombay, Mumbai",
+        email: "vprakash@iitb.ac.in",
+        phone: "9869312842"
+    },
+    {
+        name: "Dr. V. Balasubramanian",
+        role: "Professor & Director, Cemajor Manufacturing Engg.",
+        aff: "Annamalai University, Annamalai Nagar",
+        email: "visvabalu@yahoo.com",
+        phone: "9443412249"
+    },
+    {
+        name: "Dr. J. M. Mallikarjuna",
+        role: "Professor, Internal Combustion Engines Laboratory, Dept. of Mechanical Engineering",
+        aff: "Indian Institute of Technology Madras (IITM)",
+        email: "jmmallik@iitm.ac.in",
+        phone: "9444931941"
+    },
+    {
+        name: "Dr. V. Mary Anita Rajam",
+        role: "Professor and Head, Department of Computer Science and Engineering",
+        aff: "College of Engineering Guindy, Anna University",
+        email: "anitav@annauniv.edu",
+        phone: "9840700071"
+    },
+    {
+        name: "Dr. S. Albert Alexander",
+        role: "Professor, School of Electrical Engineering",
+        aff: "Vellore Institute of Technology",
+        email: "albert.alexander@vit.ac.in",
+        phone: "9865931597"
+    }
 ];
+
+// ... (advisoryCommittee definitions are above)
 
 const technicalCommittee = [
     {
@@ -131,11 +167,17 @@ export function CommitteeSection() {
                         </h3>
                         <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gray-200 -z-0"></div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
                         {advisoryCommittee.map((member, i) => (
-                            <div key={i} className="flex flex-col border-l-2 border-accent/20 pl-4 hover:border-accent transition-colors">
-                                <span className="font-bold text-primary">{member.name}</span>
-                                <span className="text-sm text-gray-600">{member.aff}</span>
+                            <div key={i} className="flex flex-col border-l-4 border-accent/20 pl-5 hover:border-accent transition-all group">
+                                <span className="font-bold text-lg text-primary group-hover:text-accent transition-colors mb-1">{member.name}</span>
+                                {member.role && <span className="text-xs font-bold uppercase tracking-wide text-gray-400 mb-1">{member.role}</span>}
+                                <span className="text-sm text-gray-700 font-medium leading-snug mb-2">{member.aff}</span>
+                                {member.email && (
+                                    <span className="text-xs text-blue-600 mt-auto flex items-center gap-1">
+                                        ✉ {member.email}
+                                    </span>
+                                )}
                             </div>
                         ))}
                     </div>
