@@ -8,7 +8,7 @@ const speakers = [
         name: "Mr. Jai Ganesh Suresh",
         title: "Senior AI Architect Lead, Valeo India Pvt. Ltd",
         email: "ganesh92jai@gmail.com",
-        image: null
+        image: "/images/keynote/1.jpg"
     },
     {
         name: "Dr. Manjula Gandhi",
@@ -20,13 +20,13 @@ const speakers = [
         name: "Karthiganesh Durai",
         title: "Founder & CEO, Kwantumg Research Labs Pvt Ltd",
         email: "karthiganesh@kwantumg.com",
-        image: null
+        image: "/images/keynote/3.jpg"
     },
     {
         name: "Dr. Balakrishnan S",
         title: "Associate Professor, Department of Physics, School of Advanced Sciences, Vellore Institute of Technology",
         email: "sbalakrishnan@vit.ac.in",
-        image: null
+        image: "/images/keynote/4.jpg"
     },
     {
         name: "Dr. Shashi Kant Pandey",
@@ -38,13 +38,13 @@ const speakers = [
         name: "Sasitharan Nagapan",
         title: "Associate Professor, Faculty of Civil Engineering and Built Environment, University Tun Hussein Onn Malaysia",
         email: "sasitharan@uthm.edu.my",
-        image: null
+        image: "/images/keynote/6.jpg"
     },
     {
         name: "Dr Sathishkumar Veerappampalayam Easwaramoorthy",
         title: "Senior Lecturer, School of Computing and Artificial Intelligence, Sunway University, Malaysia",
         email: "sathishv@sunway.edu.my",
-        image: null
+        image: "/images/keynote/7.jpg"
     }
 ];
 
