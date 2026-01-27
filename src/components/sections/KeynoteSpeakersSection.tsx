@@ -5,31 +5,45 @@ import { User, Globe, Award } from "lucide-react";
 
 const speakers = [
     {
-        name: "Dr. Robert Chen",
-        title: "Professor of Computer Science, Stanford University",
-        topic: "The Future of Generative AI in Global Markets",
-        bio: "Dr. Chen is a pioneer in large language models with over 20 years of experience. His research focuses on ethical AI deployment and its socioeconomic impacts.",
-        image: null // Placeholder
-    },
-    {
-        name: "Ms. Sarah Johnson",
-        title: "Principal Researcher, DeepMind",
-        topic: "Reinforcement Learning for Sustainable Energy",
-        bio: "Ms. Johnson leads the sustainability initiatives at DeepMind. Her work on optimizing data center cooling has been adopted globally.",
-        image: null // Placeholder
-    },
-    {
-        name: "Mr. Prashanth Balasubramanian",
-        title: "MD, Ragnar Technologies Pvt Ltd",
-        topic: "Industrial IoT and AI Convergence",
-        bio: "An industry veteran bridging the gap between hardware and intelligent software solutions for manufacturing sectors.",
+        name: "Mr. Jai Ganesh Suresh",
+        title: "Senior AI Architect Lead, Valeo India Pvt. Ltd",
+        email: "ganesh92jai@gmail.com",
         image: null
     },
     {
-        name: "Mr. Deepak Rathnam",
-        title: "CEO, Cetal",
-        topic: "AI-Driven FinTech Innovations",
-        bio: "Leading the charge in secure and scalable financial technologies powered by predictive analytics.",
+        name: "Dr. Manjula Gandhi",
+        title: "Associate Professor & Head (I/C), Department of Computing (Software Systems), Coimbatore Institute of Technology",
+        email: null,
+        image: null
+    },
+    {
+        name: "Karthiganesh Durai",
+        title: "Founder & CEO, Kwantumg Research Labs Pvt Ltd",
+        email: "karthiganesh@kwantumg.com",
+        image: null
+    },
+    {
+        name: "Dr. Balakrishnan S",
+        title: "Associate Professor, Department of Physics, School of Advanced Sciences, Vellore Institute of Technology",
+        email: "sbalakrishnan@vit.ac.in",
+        image: null
+    },
+    {
+        name: "Dr. Shashi Kant Pandey",
+        title: "Scientist C @SETS, Under the O/o Principal Scientific Advisor to the GOI",
+        email: "shashikantshvet@gmail.com",
+        image: null
+    },
+    {
+        name: "Sasitharan Nagapan",
+        title: "Associate Professor, Faculty of Civil Engineering and Built Environment, University Tun Hussein Onn Malaysia",
+        email: "sasitharan@uthm.edu.my",
+        image: null
+    },
+    {
+        name: "Dr Sathishkumar Veerappampalayam Easwaramoorthy",
+        title: "Senior Lecturer, School of Computing and Artificial Intelligence, Sunway University, Malaysia",
+        email: "sathishv@sunway.edu.my",
         image: null
     }
 ];
@@ -69,17 +83,18 @@ export function KeynoteSpeakersSection() {
 
                             {/* Content */}
                             <div className="flex-1 text-center md:text-left">
-                                <h3 className="text-xl font-bold text-primary mb-1">{speaker.name}</h3>
-                                <p className="text-sm font-medium text-blue-400 italic mb-3">{speaker.title}</p>
+                                <h3 className="text-xl font-bold text-primary mb-2 line-clamp-2 leading-tight">{speaker.name}</h3>
+                                <p className="text-sm font-medium text-gray-700 mb-4 leading-normal">{speaker.title}</p>
 
-                                <div className="mb-3">
-                                    <span className="text-xs font-bold uppercase tracking-wider text-gray-500 block mb-1">Topic</span>
-                                    <p className="font-medium text-gray-800">{speaker.topic}</p>
-                                </div>
-
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    {speaker.bio}
-                                </p>
+                                {speaker.email && (
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-semibold">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <rect width="20" height="16" x="2" y="4" rx="2" />
+                                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                        </svg>
+                                        {speaker.email}
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}
