@@ -20,7 +20,7 @@ const chairs = [
 
 const coChairs = [
     { name: "Mr. Mohan Raj Vijayan", role: "Assistant Professor, IT, MSEC" },
-    { name: "Dr. S. Sowmya", role: "Associate Professor" }
+    { name: "Dr. S. Sowmya", role: "Associate Professor, ECE, MSEC" }
 ];
 
 export function AboutCollegeSection() {
@@ -113,6 +113,7 @@ export function AboutCollegeSection() {
                                     <h4 className="text-lg font-bold text-primary mb-1">{p.name}</h4>
                                     <p className="text-sm text-gray-500 italic">{p.role}</p>
                                     {p.name.includes("Mohan") && <p className="text-xs text-gray-400 mt-2">Contact: 7358058584</p>}
+                                    {p.name.includes("Sowmya") && <p className="text-xs text-gray-400 mt-2">Contact: 9884392869</p>}
                                 </div>
                             ))}
                         </div>
