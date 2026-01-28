@@ -66,7 +66,7 @@ export function AboutCollegeSection() {
                     <div>
                         <div className="text-center mb-10 relative">
                             <h3 className="text-2xl font-bold text-primary inline-block bg-gray-50 px-4 relative z-10">
-                                PATRONS
+                                CO-PATRONS
                             </h3>
                             <div className="absolute top-1/2 left-0 w-full h-[1px] bg-red-200 -z-0"></div>
                         </div>
