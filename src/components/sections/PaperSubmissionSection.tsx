@@ -78,7 +78,7 @@ export function PaperSubmissionSection() {
                             </h3>
                             <div className="text-gray-700 space-y-3 leading-relaxed">
                                 <p>
-                                    All accepted papers will be published in Proceedings / Scopus Indexed Journals.
+                                    All accepted papers will be published in Scopus Proceedings / Scopus Indexed Journals.
                                 </p>
                                 <p>
                                     At least one author must register for each accepted paper to be published.
