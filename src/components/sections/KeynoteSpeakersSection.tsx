@@ -84,7 +84,7 @@ export function KeynoteSpeakersSection() {
                             {/* Content */}
                             <div className="flex-1 text-center md:text-left">
                                 <h3 className="text-xl font-bold text-primary mb-2 line-clamp-2 leading-tight">{speaker.name}</h3>
-                                <p className="text-sm font-medium text-gray-700 mb-4 leading-normal">{speaker.title}</p>
+                                <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-4 leading-normal">{speaker.title}</p>
 
                                 {speaker.email && (
                                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-semibold">

@@ -171,8 +171,8 @@ export function CommitteeSection() {
                         {advisoryCommittee.map((member, i) => (
                             <div key={i} className="flex flex-col border-l-4 border-accent/20 pl-5 hover:border-accent transition-all group">
                                 <span className="font-bold text-lg text-primary group-hover:text-accent transition-colors mb-1">{member.name}</span>
-                                {member.role && <span className="text-xs font-bold uppercase tracking-wide text-gray-400 mb-1">{member.role}</span>}
-                                <span className="text-sm text-gray-700 font-medium leading-snug mb-2">{member.aff}</span>
+                                {member.role && <span className="text-xs font-bold uppercase tracking-wide text-gray-500 mb-1">{member.role}</span>}
+                                <span className="text-sm text-gray-900 font-medium leading-snug mb-2">{member.aff}</span>
                                 {member.email && (
                                     <span className="text-xs text-blue-600 mt-auto flex items-center gap-1">
                                         ✉ {member.email}
@@ -195,8 +195,8 @@ export function CommitteeSection() {
                         {technicalCommittee.map((member, i) => (
                             <div key={i} className="flex flex-col border-l-4 border-secondary/20 pl-5 hover:border-secondary transition-all group">
                                 <span className="font-bold text-lg text-primary group-hover:text-secondary transition-colors mb-1">{member.name}</span>
-                                {member.role && <span className="text-xs font-bold uppercase tracking-wide text-gray-400 mb-1">{member.role}</span>}
-                                <span className="text-sm text-gray-700 font-medium leading-snug mb-2">{member.aff}</span>
+                                {member.role && <span className="text-xs font-bold uppercase tracking-wide text-gray-500 mb-1">{member.role}</span>}
+                                <span className="text-sm text-gray-900 font-medium leading-snug mb-2">{member.aff}</span>
                                 {member.email && (
                                     <span className="text-xs text-blue-600 mt-auto flex items-center gap-1">
                                         ✉ {member.email}
