@@ -153,7 +153,7 @@ export function Hero() {
                                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                             </Link>
                             <Link
-                                href="/call-for-papers"
+                                href="/#call-for-papers"
                                 className="px-8 py-4 bg-transparent border-2 border-white/30 text-white text-lg font-bold rounded-full hover:bg-white/10 transition-all backdrop-blur-sm"
                             >
                                 Submit Paper

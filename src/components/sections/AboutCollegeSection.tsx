@@ -95,7 +95,7 @@ export function AboutCollegeSection() {
                                 <div key={i} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all text-center border-t-4 border-accent w-72">
                                     <h4 className="text-lg font-bold text-primary mb-1">{p.name}</h4>
                                     <p className="text-xs text-gray-500 font-bold uppercase tracking-wide mt-1">{p.role}</p>
-                                    <p className="text-xs text-gray-400 mt-2">Contact: 9003116690</p>
+                                    <p className="text-xs text-gray-900 font-medium mt-2">Contact: 9003116690</p>
                                 </div>
                             ))}
                         </div>
@@ -112,8 +112,8 @@ export function AboutCollegeSection() {
                                 <div key={i} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all text-center border-t-4 border-accent w-72">
                                     <h4 className="text-lg font-bold text-primary mb-1">{p.name}</h4>
                                     <p className="text-xs text-gray-500 font-bold uppercase tracking-wide mt-1">{p.role}</p>
-                                    {p.name.includes("Mohan") && <p className="text-xs text-gray-400 mt-2">Contact: 7358058584</p>}
-                                    {p.name.includes("Sowmya") && <p className="text-xs text-gray-400 mt-2">Contact: 9884392869</p>}
+                                    {p.name.includes("Mohan") && <p className="text-xs text-gray-900 font-medium mt-2">Contact: 7358058584</p>}
+                                    {p.name.includes("Sowmya") && <p className="text-xs text-gray-900 font-medium mt-2">Contact: 9884392869</p>}
                                 </div>
                             ))}
                         </div>
