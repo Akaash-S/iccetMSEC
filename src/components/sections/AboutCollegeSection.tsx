@@ -85,7 +85,7 @@ export function AboutCollegeSection() {
                     <div>
                         <div className="text-center mb-10 relative">
                             <h3 className="text-2xl font-bold text-primary inline-block bg-gray-50 px-4 relative z-10">
-                                CONFERENCE CHAIRS
+                                GENERAL CHAIRS
                             </h3>
                             <div className="absolute top-1/2 left-0 w-full h-[1px] bg-red-200 -z-0"></div>
                         </div>
@@ -102,7 +102,7 @@ export function AboutCollegeSection() {
 
                         <div className="text-center mb-10 relative">
                             <h3 className="text-2xl font-bold text-primary inline-block bg-gray-50 px-4 relative z-10">
-                                CONFERENCE CO-CHAIRS
+                                CO-CHAIRS
                             </h3>
                             <div className="absolute top-1/2 left-0 w-full h-[1px] bg-red-200 -z-0"></div>
                         </div>
