@@ -62,8 +62,11 @@ export function Header() {
                             MSEC
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-xl font-bold text-[#003366] leading-none uppercase tracking-wide group-hover:text-[#E31E24] transition-colors">
-                                MSEC
+                            <span className="text-base sm:text-lg md:text-xl font-bold text-[#003366] leading-none uppercase tracking-wide group-hover:text-[#E31E24] transition-colors">
+                                MEENAKSHI SUNDARARAJAN
+                            </span>
+                            <span className="text-base sm:text-lg md:text-xl font-bold text-[#003366] leading-none uppercase tracking-wide group-hover:text-[#E31E24] transition-colors">
+                                ENGINEERING COLLEGE
                             </span>
                             {/* <span className="text-[10px] sm:text-xs font-semibold text-gray-500 uppercase tracking-widest mt-0.5">
                                 Meenakshi Sundararajan Engineering College
