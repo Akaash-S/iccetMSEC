@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Sparkles, Layers, Wifi, Cpu } from "lucide-react";
 import { RunningHighlights } from "@/components/ui/RunningHighlights";
+import Image from "next/image";
 
 export function Hero() {
     return (
@@ -19,6 +20,25 @@ export function Hero() {
                 <div className="absolute inset-0 z-0">
                     {/* Base Dark Gradient */}
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-900 via-[#0F172A] to-[#0B1120] opacity-95"></div>
+
+                    {/* Background Image */}
+                    <div className="absolute inset-0 z-0">
+                        <Image
+                            src="/images/hero_background.png"
+                            alt="AI Technology Background"
+                            fill
+                            className="object-cover opacity-80"
+                            priority
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/70 to-dark"></div>
+                    </div>
+
+                    {/* Background Effects */}
+                    <div className="absolute inset-0 overflow-hidden z-10 pointer-events-none">
+                        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-3xl opacity-30 animate-blob"></div>
+                        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+                    </div>
 
                     {/* Tech Pattern Overlay */}
                     <motion.div
