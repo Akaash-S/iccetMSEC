@@ -96,11 +96,11 @@ export function PublicationsSection() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
                         {[
-                            { label: "Abstract Submission", date: "31 Oct 2025", color: "border-blue-500" },
-                            { label: "Paper Submission", date: "10 Apr 2026", color: "border-indigo-500" },
+                            { label: "Abstract Submission", date: "28 February 2026", color: "border-blue-500" },
+                            { label: "Paper Submission", date: "10 April 2026", color: "border-indigo-500" },
                             { label: "Acceptance Notification", date: "15 May 2026", color: "border-purple-500" },
                             { label: "Registration & Camera Ready", date: "31 May 2026", color: "border-green-500" },
-                            { label: "Conference Date", date: "12 Aug 2026", color: "border-accent", highlight: true },
+                            { label: "Conference Date", date: "12 August 2026", color: "border-accent", highlight: true },
                         ].map((item, index) => (
                             <div key={index} className={`bg-white p-4 rounded-lg shadow-md border-t-4 ${item.color} hover:-translate-y-1 transition-transform ${item.highlight ? 'ring-2 ring-accent/20' : ''}`}>
                                 <p className="text-gray-500 text-xs font-bold uppercase tracking-wide mb-2 h-8 flex items-center">{item.label}</p>

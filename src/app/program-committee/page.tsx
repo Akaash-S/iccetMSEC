@@ -21,14 +21,14 @@ const committee: {
             role: "Patrons",
             members: [
                 { name: "Dr. S. V. Saravanan", title: "Principal, MSEC" },
-                { name: "Dr. Poongothai", title: "Dean-Research, MSEC" }
+                { name: "Dr. S. Poongothai", title: "Dean-Research, MSEC" }
             ]
         },
         {
             role: "Conference Chair",
             members: [
+                { name: "Dr. V.J. Arul Karthick", title: "Dean-IQAC, MSEC" },
                 { name: "Dr. R. Arivazhagan", title: "Head-Research, MSEC", contact: "9003116690" },
-                { name: "Dr. V.J. Arul Karthick", title: "Dean-IQAC, MSEC" }
             ]
         },
         {

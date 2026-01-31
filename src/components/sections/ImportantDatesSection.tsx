@@ -3,13 +3,13 @@ import { Calendar, CheckCircle, Clock, FileText, UserCheck } from "lucide-react"
 const dates = [
     {
         label: "Abstract Submission",
-        date: "31 Oct 2025",
+        date: "28 February 2026",
         icon: FileText,
         color: "bg-blue-50 text-blue-600",
     },
     {
         label: "Paper Submission",
-        date: "10 Apr 2026",
+        date: "10 April 2026",
         icon: FileText,
         color: "bg-indigo-50 text-indigo-600",
     },
@@ -27,7 +27,7 @@ const dates = [
     },
     {
         label: "Conference Date",
-        date: "12 Aug 2026",
+        date: "12 August 2026",
         icon: Calendar,
         color: "bg-purple-50 text-purple-600",
         highlight: true

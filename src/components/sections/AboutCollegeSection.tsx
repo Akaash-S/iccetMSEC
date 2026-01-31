@@ -10,12 +10,12 @@ const chiefPatrons = [
 
 const patrons = [
     { name: "Dr. S. V. Saravanan", role: "Principal, MSEC" },
-    { name: "Dr. Poongothai", role: "Dean-Research, MSEC" }
+    { name: "Dr. S. Poongothai", role: "Dean-Research, MSEC" }
 ];
 
 const chairs = [
+    { name: "Dr. V.J. Arul Karthick", role: "Dean-IQAC, MSEC" },
     { name: "Dr. R. Arivazhagan", role: "Head-Research, MSEC" },
-    { name: "Dr. V.J. Arul Karthick", role: "Dean-IQAC, MSEC" }
 ];
 
 const coChairs = [
