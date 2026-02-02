@@ -161,29 +161,34 @@ export function Hero() {
                         </div>
 
                         {/* Partner Logos Strip */}
-                        <div className="w-full max-w-6xl mx-auto bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
+                        <div className="w-full max-w-6xl mx-auto bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 mt-12">
                             <p className="text-sm text-gray-400 uppercase tracking-widest mb-6 font-semibold">Our Organization & Industry Partners</p>
-                            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6">
+                            <div className="flex flex-wrap justify-center items-center gap-6">
                                 {[
-                                    { name: "ISRO", color: "from-orange-500 to-orange-600" },
-                                    { name: "NIELIT", color: "from-blue-500 to-blue-600" },
-                                    { name: "CDAC", color: "from-cyan-500 to-blue-500" },
-                                    { name: "NIOT", color: "from-teal-500 to-teal-600" },
-                                    { name: "ZF", color: "from-blue-800 to-blue-900" },
-                                    { name: "Virtusa", color: "from-yellow-500 to-orange-500" },
-                                    { name: "ARX", color: "from-red-500 to-red-600" },
-                                    { name: "USM", color: "from-purple-500 to-purple-600" },
-                                    { name: "MMU", color: "from-indigo-500 to-indigo-600" },
-                                    { name: "Chula", color: "from-pink-500 to-pink-600" }
+                                    { name: "ISRO", logo: "/images/organizers/isro.jpg" },
+                                    { name: "NIELIT", logo: "/images/organizers/nielit.jpg" },
+                                    { name: "CDAC", logo: "/images/organizers/cdac.jpg" },
+                                    { name: "NIOT", logo: "/images/organizers/niot.jpg" },
+                                    { name: "ZF", logo: "/images/organizers/zf.jpg" },
+                                    { name: "Virtusa", logo: "/images/organizers/virtusa.jpg" },
+                                    { name: "ARX", logo: "/images/organizers/arx.jpg" },
+                                    { name: "USM", logo: "/images/organizers/usm.jpg" },
+                                    { name: "MMU", logo: "/images/organizers/mmu.jpg" },
+                                    { name: "Chula", logo: "/images/organizers/chula.jpg" }
                                 ].map((partner, index) => (
                                     <div
                                         key={index}
-                                        className="group relative px-6 py-3 bg-white/5 rounded-lg border border-white/5 hover:border-white/20 transition-all cursor-default"
+                                        className="h-16 w-32 bg-white rounded-lg flex items-center justify-center p-2 opacity-80 hover:opacity-100 hover:scale-105 transition-all shadow-lg"
+                                        title={partner.name}
                                     >
-                                        <div className={`absolute inset-0 bg-gradient-to-r ${partner.color} opacity-0 group-hover:opacity-10 rounded-lg transition-opacity duration-300`}></div>
-                                        <span className="text-lg font-bold text-gray-300 group-hover:text-white transition-colors relative z-10">
-                                            {partner.name}
-                                        </span>
+                                        <div className="relative w-full h-full">
+                                            <Image
+                                                src={partner.logo}
+                                                alt={partner.name}
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </div>
                                     </div>
                                 ))}
                             </div>

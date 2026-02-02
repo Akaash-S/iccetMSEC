@@ -7,6 +7,7 @@ import { PublicationsSection } from "@/components/sections/PublicationsSection";
 import { CallForPapersSection } from "@/components/sections/CallForPapersSection";
 import { PaperSubmissionSection } from "@/components/sections/PaperSubmissionSection";
 import { SponsorshipSection } from "@/components/sections/SponsorshipSection";
+import { PartnersSection } from "@/components/sections/PartnersSection";
 import { RegistrationSection } from "@/components/sections/RegistrationSection";
 
 export default function Home() {
