@@ -56,12 +56,16 @@ export function AboutCollegeSection() {
                             { name: "Marina Beach", img: "/images/chennai/marina_beach.jpg", desc: "Iconic coastline of Chennai, one of the longest urban beaches in the world." },
                             { name: "Kapaleeswarar Temple", img: "/images/chennai/kapaleeswarar_temple.jpg", desc: "Historic Dravidian architecture dedicated to Lord Shiva in Mylapore." },
                             { name: "Santhome Basilica", img: "/images/chennai/santhome_basilica.jpg", desc: "Major Christian landmark built over the tomb of St. Thomas." },
+                            { name: "DakshinaChitra Heritage Museum", img: "/images/chennai/dakshinachitra.jpg", desc: "Living museum showcasing South Indian heritage, art, and traditional architecture." },
+                            { name: "Guindy National Park", img: "/images/chennai/guindy_park.jpg", desc: "One of India's smallest national parks located within city limits, home to diverse wildlife." },
+                            { name: "Cholamandalam Artists Village", img: "/images/chennai/cholamandalam.jpg", desc: "Historic artists' commune and contemporary art center showcasing Indian modern art." },
                             { name: "Modern Chennai Skyline", img: "/images/chennai/chennai_skyline.jpg", desc: "A growing metro hub showcasing the city's development." },
                             { name: "Ripon Building", img: "/images/chennai/ripon_building.jpg", desc: "Iconic Indo-Saracenic landmark and Chennai Corporation headquarters." },
                             { name: "Valluvar Kottam", img: "/images/chennai/valluvar_kottam.jpg", desc: "Monument honoring the great Tamil poet Thiruvalluvar." },
                             { name: "Vandalur Zoo", img: "/images/chennai/vandalur_zoo.jpg", desc: "One of India's largest zoological parks with diverse wildlife." },
                             { name: "Mahabalipuram", img: "/images/chennai/mahabalipuram.jpg", desc: "UNESCO World Heritage site known for ancient rock-cut temples." },
                             { name: "Sharadambal Temple", img: "/images/chennai/sharadambal.jpg", desc: "Dedicated to Goddess Sharadambal in varying architectural styles." },
+
                         ].map((place, idx) => (
                             <div key={idx} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 group">
                                 <div className="relative h-48 overflow-hidden">

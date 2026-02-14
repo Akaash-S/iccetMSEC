@@ -214,14 +214,14 @@ const tracks = [
 
 export function CallForPapersSection() {
     return (
-        <section className="py-20 bg-dark text-white" id="call-for-papers">
+        <section className="py-20 bg-gray-50 text-gray-900" id="call-for-papers">
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-white inline-block relative pb-2 font-heading">
+                    <h2 className="text-4xl font-bold text-dark inline-block relative pb-2 font-heading">
                         CALL FOR PAPERS
                         <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-accent rounded-full"></span>
                     </h2>
-                    <p className="mt-4 text-gray-400">Themes and Research Areas</p>
+                    <p className="mt-4 text-gray-600">Themes and Research Areas</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -232,21 +232,21 @@ export function CallForPapersSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: idx * 0.05 }}
-                            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
+                            className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-primary/30 transition-all"
                         >
                             <div className="flex items-start gap-4 mb-4">
-                                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-accent/20 text-accent font-bold text-sm shrink-0 mt-1">
+                                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent font-bold text-sm shrink-0 mt-1">
                                     {idx + 1}
                                 </span>
-                                <h3 className="text-lg font-bold text-secondary leading-tight">
+                                <h3 className="text-lg font-bold text-primary leading-tight">
                                     {track.title}
                                 </h3>
                             </div>
 
                             <ul className="space-y-2 ml-12">
                                 {track.topics.map((subTopic, subIdx) => (
-                                    <li key={subIdx} className="text-sm text-gray-300 flex items-start gap-2">
-                                        <span className="w-1.5 h-1.5 mt-1.5 bg-gray-500 rounded-full shrink-0"></span>
+                                    <li key={subIdx} className="text-sm text-gray-700 flex items-start gap-2">
+                                        <span className="w-1.5 h-1.5 mt-1.5 bg-gray-400 rounded-full shrink-0"></span>
                                         <span className="leading-relaxed">{subTopic}</span>
                                     </li>
                                 ))}

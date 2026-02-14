@@ -165,16 +165,21 @@ export function Hero() {
                             <p className="text-sm text-gray-400 uppercase tracking-widest mb-6 font-semibold">Our Organization & Industry Partners</p>
                             <div className="flex flex-wrap justify-center items-center gap-6">
                                 {[
+                                    // International Universities
+                                    { name: "USM", logo: "/images/organizers/usm.jpg" },
+                                    { name: "MMU", logo: "/images/organizers/mmu.jpg" },
+                                    { name: "Chula", logo: "/images/organizers/chula.jpg" },
+                                    // International Companies
+                                    { name: "ZF", logo: "/images/organizers/zf.jpg" },
+                                    { name: "Virtusa", logo: "/images/organizers/virtusa.jpg" },
+                                    // National (Indian) Organizations
                                     { name: "ISRO", logo: "/images/organizers/isro.jpg" },
                                     { name: "NIELIT", logo: "/images/organizers/nielit.jpg" },
                                     { name: "CDAC", logo: "/images/organizers/cdac.jpg" },
                                     { name: "NIOT", logo: "/images/organizers/niot.jpg" },
-                                    { name: "ZF", logo: "/images/organizers/zf.jpg" },
-                                    { name: "Virtusa", logo: "/images/organizers/virtusa.jpg" },
-                                    { name: "ARX", logo: "/images/organizers/arx.jpg" },
-                                    { name: "USM", logo: "/images/organizers/usm.jpg" },
-                                    { name: "MMU", logo: "/images/organizers/mmu.jpg" },
-                                    { name: "Chula", logo: "/images/organizers/chula.jpg" }
+                                    // Others
+                                    { name: "ARX", logo: "/images/organizers/arx.jpg" }
+
                                 ].map((partner, index) => (
                                     <div
                                         key={index}

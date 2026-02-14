@@ -11,12 +11,6 @@ const speakers = [
         image: "/images/keynote/1.jpg"
     },
     {
-        name: "Dr. Manjula Gandhi",
-        title: "Associate Professor & Head (I/C), Department of Computing (Software Systems), Coimbatore Institute of Technology",
-        email: null,
-        image: null
-    },
-    {
         name: "Karthiganesh Durai",
         title: "Founder & CEO, Kwantumg Research Labs Pvt Ltd",
         email: "karthiganesh@kwantumg.com",
@@ -29,12 +23,6 @@ const speakers = [
         image: "/images/keynote/4.jpg"
     },
     {
-        name: "Dr. Shashi Kant Pandey",
-        title: "Scientist C @SETS, Under the O/o Principal Scientific Advisor to the GOI",
-        email: "shashikantshvet@gmail.com",
-        image: null
-    },
-    {
         name: "Sasitharan Nagapan",
         title: "Associate Professor, Faculty of Civil Engineering and Built Environment, University Tun Hussein Onn Malaysia",
         email: "sasitharan@uthm.edu.my",
@@ -45,6 +33,18 @@ const speakers = [
         title: "Senior Lecturer, School of Computing and Artificial Intelligence, Sunway University, Malaysia",
         email: "sathishv@sunway.edu.my",
         image: "/images/keynote/7.jpg"
+    },
+    {
+        name: "Dr. Manjula Gandhi",
+        title: "Associate Professor & Head (I/C), Department of Computing (Software Systems), Coimbatore Institute of Technology",
+        email: null,
+        image: null
+    },
+    {
+        name: "Dr. Shashi Kant Pandey",
+        title: "Scientist C @SETS, Under the O/o Principal Scientific Advisor to the GOI",
+        email: "shashikantshvet@gmail.com",
+        image: null
     }
 ];
 
