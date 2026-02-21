@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface NavLink {
@@ -21,17 +22,6 @@ const navLinks: NavLink[] = [
     { name: "Call For Papers", href: "/#call-for-papers" },
     { name: "Paper submission", href: "/#paper-submission" },
     { name: "Sponsorship", href: "/#sponsorship" },
-    // {
-    //     name: "Workshop",
-    //     href: "#",
-    //     dropdown: [
-    //         { name: "Workshop by CoreEL technologies", href: "#" },
-    //         { name: "Workshop by ElenTech Engineering", href: "#" },
-    //         { name: "Workshop by Transformation in Automotive", href: "#" },
-    //         { name: "Workshop in Statistical Tools", href: "#" },
-    //         { name: "Workshop on 3D Printing", href: "#" },
-    //     ],
-    // },
 ];
 
 export function Header() {
@@ -46,105 +36,143 @@ export function Header() {
     }, []);
 
     return (
-        <header
-            className={cn(
-                "sticky top-0 left-0 right-0 z-50 bg-white transition-all duration-300 border-b border-gray-200",
-                scrolled ? "shadow-md py-1" : "py-2"
-            )}
-        >
-            <div className="container mx-auto px-4 max-w-[1600px] flex items-center justify-between">
+        <header className="sticky top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-md">
 
-                {/* Logo Area */}
-                <Link href="/" className="flex items-center gap-4 group shrink-0">
-                    <div className="flex items-center gap-3">
-                        {/* Circle Logo Placeholder */}
-                        <div className="relative w-12 h-12 flex items-center justify-center bg-[#003366] rounded-full text-white font-serif font-bold text-xl border-2 border-[#E31E24] shadow-sm">
-                            MSEC
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="text-base sm:text-lg md:text-xl font-bold text-[#003366] leading-none uppercase tracking-wide group-hover:text-[#E31E24] transition-colors">
-                                MEENAKSHI SUNDARARAJAN
-                            </span>
-                            <span className="text-base sm:text-lg md:text-xl font-bold text-[#003366] leading-none uppercase tracking-wide group-hover:text-[#E31E24] transition-colors">
-                                ENGINEERING COLLEGE
-                            </span>
-                            {/* <span className="text-[10px] sm:text-xs font-semibold text-gray-500 uppercase tracking-widest mt-0.5">
-                                Meenakshi Sundararajan Engineering College
-                            </span> */}
-                        </div>
+            {/* ── Institution Banner (image strip) ── */}
+            <div className="w-full bg-white border-b border-gray-100">
+                <div className="container mx-auto px-4 max-w-[1600px] flex items-center justify-between py-2 gap-4">
+
+                    {/* MSEC Logo */}
+                    <div className="shrink-0">
+                        <Image
+                            src="/images/msec.png"
+                            alt="MSEC Logo"
+                            width={80}
+                            height={80}
+                            className="object-contain h-16 w-auto"
+                            priority
+                        />
                     </div>
-                </Link>
 
-                {/* Desktop Nav */}
-                <nav className="hidden xl:flex items-center gap-5 2xl:gap-8 ml-auto mr-8">
-                    {navLinks.map((link) => (
-                        <div
-                            key={link.name}
-                            className="relative"
-                            onMouseEnter={() => setActiveDropdown(link.name)}
-                            onMouseLeave={() => setActiveDropdown(null)}
-                        >
-                            <Link
-                                href={link.href}
-                                className={cn(
-                                    "text-[15px] font-bold text-[#003366] hover:text-[#E31E24] transition-colors flex items-center gap-0.5 py-4",
-                                    link.name === "Call For Papers" && "text-[#003366]"
-                                )}
-                            >
-                                {link.name}
-                                {link.dropdown && <ChevronDown size={14} className="mt-0.5 opacity-60" />}
-                            </Link>
+                    {/* College Name & Info (center) */}
+                    <div className="flex-1 text-center px-2">
+                        <p className="text-[#006600] font-extrabold text-xl md:text-2xl leading-tight">
+                            Meenakshi Sundararajan Engineering College
+                        </p>
+                        <p className="text-[#006600] font-bold text-sm md:text-base">
+                            ( An Autonomous Institution )
+                        </p>
+                        <p className="text-gray-700 text-[11px] md:text-xs leading-snug mt-0.5">
+                            ( Managed by I.I.E.T Society, Approved by AICTE, New Delhi, Affiliated to Anna University, Chennai,
+                            Accredited by NAAC with &apos;A&apos; grade and NBA for programs applied. Recognized by UGC with 2(f) &amp; 12(B)
+                            status, Recognized Research Institute by Anna University, Chennai )
+                        </p>
+                        <p className="text-gray-700 text-[11px] md:text-xs">
+                            363, Arcot Road, Kodambakkam,
+                        </p>
+                        <p className="text-gray-900 font-bold text-sm md:text-base">
+                            Chennai - 600 024, Tamil Nadu, India.
+                        </p>
+                    </div>
 
-                            {/* Dropdown */}
-                            {link.dropdown && (
-                                <AnimatePresence>
-                                    {activeDropdown === link.name && (
-                                        <motion.div
-                                            initial={{ opacity: 0, y: 10 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            exit={{ opacity: 0, y: 10 }}
-                                            transition={{ duration: 0.15 }}
-                                            className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-b-md border-t-4 border-[#E31E24] overflow-hidden"
-                                        >
-                                            {link.dropdown.map((dropItem, idx) => (
-                                                <Link
-                                                    key={idx}
-                                                    href={dropItem.href}
-                                                    className="flex items-start gap-2 px-4 py-3 text-sm text-[#003366] hover:bg-gray-50 hover:text-[#E31E24] transition-colors border-b border-gray-100 last:border-0 font-medium"
-                                                >
-                                                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#E31E24] shrink-0"></span>
-                                                    <span className="leading-tight">{dropItem.name}</span>
-                                                </Link>
-                                            ))}
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            )}
-                        </div>
-                    ))}
-                </nav>
-
-                {/* Right Side: Register Button */}
-                <div className="flex items-center gap-4 shrink-0">
-                    {/* Register Button */}
-                    <Link
-                        href="/#registration"
-                        className="hidden xl:block px-8 py-2.5 bg-[#E31E24] text-white font-bold text-sm uppercase tracking-wide rounded-sm shadow-sm hover:bg-red-700 transition-colors"
-                    >
-                        Register
-                    </Link>
-
-                    {/* Mobile Toggle */}
-                    <button
-                        className="xl:hidden p-2 text-[#003366]"
-                        onClick={() => setMobileMenuOpen(true)}
-                    >
-                        <Menu size={28} />
-                    </button>
+                    {/* Right logos: NBA + NAAC */}
+                    <div className="shrink-0 flex items-center gap-2">
+                        <Image
+                            src="/images/nba.png"
+                            alt="NBA Accreditation"
+                            width={70}
+                            height={70}
+                            className="object-contain h-14 w-auto"
+                            priority
+                        />
+                        <Image
+                            src="/images/naac.png"
+                            alt="NAAC A Grade"
+                            width={70}
+                            height={70}
+                            className="object-contain h-14 w-auto"
+                            priority
+                        />
+                    </div>
                 </div>
             </div>
 
-            {/* Mobile Menu Overlay */}
+            {/* ── Navigation Bar ── */}
+            <div
+                className={cn(
+                    "w-full bg-white transition-all duration-300",
+                    scrolled ? "py-1" : "py-0"
+                )}
+            >
+                <div className="container mx-auto px-4 max-w-[1600px] flex items-center justify-between">
+
+                    {/* Desktop Nav */}
+                    <nav className="hidden xl:flex items-center gap-5 2xl:gap-8">
+                        {navLinks.map((link) => (
+                            <div
+                                key={link.name}
+                                className="relative"
+                                onMouseEnter={() => setActiveDropdown(link.name)}
+                                onMouseLeave={() => setActiveDropdown(null)}
+                            >
+                                <Link
+                                    href={link.href}
+                                    className="text-[15px] font-bold text-[#003366] hover:text-[#E31E24] transition-colors flex items-center gap-0.5 py-3"
+                                >
+                                    {link.name}
+                                    {link.dropdown && <ChevronDown size={14} className="mt-0.5 opacity-60" />}
+                                </Link>
+
+                                {/* Dropdown */}
+                                {link.dropdown && (
+                                    <AnimatePresence>
+                                        {activeDropdown === link.name && (
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                exit={{ opacity: 0, y: 10 }}
+                                                transition={{ duration: 0.15 }}
+                                                className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-b-md border-t-4 border-[#E31E24] overflow-hidden"
+                                            >
+                                                {link.dropdown.map((dropItem, idx) => (
+                                                    <Link
+                                                        key={idx}
+                                                        href={dropItem.href}
+                                                        className="flex items-start gap-2 px-4 py-3 text-sm text-[#003366] hover:bg-gray-50 hover:text-[#E31E24] transition-colors border-b border-gray-100 last:border-0 font-medium"
+                                                    >
+                                                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#E31E24] shrink-0"></span>
+                                                        <span className="leading-tight">{dropItem.name}</span>
+                                                    </Link>
+                                                ))}
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                )}
+                            </div>
+                        ))}
+                    </nav>
+
+                    {/* Register Button */}
+                    <div className="flex items-center gap-4 shrink-0 ml-auto">
+                        <Link
+                            href="/#registration"
+                            className="hidden xl:block px-8 py-2.5 bg-[#E31E24] text-white font-bold text-sm uppercase tracking-wide rounded-sm shadow-sm hover:bg-red-700 transition-colors"
+                        >
+                            Register
+                        </Link>
+
+                        {/* Mobile Toggle */}
+                        <button
+                            className="xl:hidden p-2 text-[#003366]"
+                            onClick={() => setMobileMenuOpen(true)}
+                        >
+                            <Menu size={28} />
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {/* ── Mobile Menu Overlay ── */}
             <AnimatePresence>
                 {mobileMenuOpen && (
                     <motion.div
