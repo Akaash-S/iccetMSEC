@@ -1,49 +1,59 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+
+const items = [
+    "Abstract Submission Deadline: October 2025",
+    "Selected papers will be published in Scopus Indexed Journals",
+    "Hybrid Mode Conference: Physical & Virtual Participation",
+    "Keynote Speakers from Global Top Universities",
+];
 
 export function RunningHighlights() {
     return (
         <div className="w-full bg-[#E31E24] text-white py-2 overflow-hidden relative z-40 border-b border-white/10">
+            <style>{`
+                @keyframes marquee {
+                    0%   { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+                .marquee-track {
+                    display: flex;
+                    width: max-content;
+                    animation: marquee 25s linear infinite;
+                }
+            `}</style>
+
             <div className="flex items-center">
-                <span className="bg-[#003366] text-white text-xs font-bold px-4 py-2 absolute left-0 z-10 shadow-md">
+                {/* "LATEST UPDATES" badge */}
+                <span className="bg-[#003366] text-white text-xs font-bold px-4 py-2 absolute left-0 z-10 shadow-md whitespace-nowrap">
                     LATEST UPDATES
                 </span>
-                <div className="flex overflow-hidden w-full mask-gradient-to-r">
-                    <motion.div
-                        className="flex items-center gap-12 whitespace-nowrap pl-[150px]"
-                        animate={{ x: ["0%", "-100%"] }}
-                        transition={{
-                            repeat: Infinity,
-                            ease: "linear",
-                            duration: 30, // Adjust speed
-                        }}
-                    >
-                        {[
-                            "Abstract Submission Deadline: October 2025",
-                            "Selected papers will be published in Scopus Indexed Journals",
-                            "Hybrid Mode Conference: Physical & Virtual Participation",
-                            "Keynote Speakers from Global Top Universities",
-                        ].map((item, index) => (
-                            <span key={index} className="flex items-center gap-2 text-sm font-medium tracking-wide">
-                                <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
+
+                {/* Scrolling ticker — padded left so it starts after the badge */}
+                <div className="overflow-hidden w-full pl-[150px]">
+                    <div className="marquee-track">
+                        {/* Copy 1 */}
+                        {items.map((item, index) => (
+                            <span
+                                key={`a-${index}`}
+                                className="flex items-center gap-2 text-sm font-medium tracking-wide mr-12 whitespace-nowrap"
+                            >
+                                <span className="w-2 h-2 bg-yellow-400 rounded-full shrink-0"></span>
                                 {item}
                             </span>
                         ))}
-                        {/* Duplicate for seamless loop */}
-                        {[
-                            "Abstract Submission Deadline: October 2025",
-                            "Selected papers will be published in Scopus Indexed Journals",
-                            "Hybrid Mode Conference: Physical & Virtual Participation",
-                            "Keynote Speakers from Global Top Universities",
-                        ].map((item, index) => (
-                            <span key={`dup-${index}`} className="flex items-center gap-2 text-sm font-medium tracking-wide">
-                                <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
+                        {/* Copy 2 — identical, creates seamless loop */}
+                        {items.map((item, index) => (
+                            <span
+                                key={`b-${index}`}
+                                className="flex items-center gap-2 text-sm font-medium tracking-wide mr-12 whitespace-nowrap"
+                            >
+                                <span className="w-2 h-2 bg-yellow-400 rounded-full shrink-0"></span>
                                 {item}
                             </span>
                         ))}
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </div>
