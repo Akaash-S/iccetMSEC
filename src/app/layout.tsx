@@ -11,7 +11,12 @@ export const metadata: Metadata = {
   title: "ICTAGI 2026 | Transformative AI for Global Impact",
   description:
     "International Conference on Transformative AI for Global Impact (ICTAGI 2026) at Meenakshi Sundararajan Engineering College, Chennai.",
+  icons: {
+    icon: "/images/msec.png",
+    apple: "/images/msec.png",
+  },
 };
+
 
 export default function RootLayout({
   children,
