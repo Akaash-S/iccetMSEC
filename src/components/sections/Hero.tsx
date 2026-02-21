@@ -138,15 +138,17 @@ export function Hero() {
 
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-5 mb-16">
-                            <Link
-                                href="/#registration"
+                            <a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSdUiQ3npHVS8Y-xkYun-3plF8Q77k7o7t57SkR09kiyWz8ppQ/viewform"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="group relative px-8 py-4 bg-accent text-white text-lg font-bold rounded-full hover:bg-accent-hover transition-all shadow-glow hover:shadow-glow-lg overflow-hidden"
                             >
                                 <span className="relative z-10 flex items-center gap-2">
                                     REGISTER NOW <Sparkles size={18} />
                                 </span>
                                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                            </Link>
+                            </a>
                             <Link
                                 href="/#call-for-papers"
                                 className="px-8 py-4 bg-transparent border-2 border-white/30 text-white text-lg font-bold rounded-full hover:bg-white/10 transition-all backdrop-blur-sm"

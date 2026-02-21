@@ -146,12 +146,14 @@ export function Header() {
 
                         {/* Register Button + Mobile Toggle */}
                         <div className="flex items-center gap-4 shrink-0 ml-auto">
-                            <Link
-                                href="/#registration"
-                                className="hidden xl:block px-8 py-2.5 bg-[#E31E24] text-white font-bold text-sm uppercase tracking-wide rounded-sm shadow-sm hover:bg-red-700 transition-colors"
-                            >
-                                Register
-                            </Link>
+                            <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSdUiQ3npHVS8Y-xkYun-3plF8Q77k7o7t57SkR09kiyWz8ppQ/viewform"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hidden xl:block px-8 py-2.5 bg-[#E31E24] text-white font-bold text-sm uppercase tracking-wide rounded-sm shadow-sm hover:bg-red-700 transition-colors"
+                        >
+                            Register
+                        </a>
 
                             <button
                                 className="xl:hidden p-2 text-[#003366]"
@@ -226,13 +228,14 @@ export function Header() {
                                         )}
                                     </div>
                                 ))}
-                                <Link
-                                    href="/#registration"
-                                    onClick={() => setMobileMenuOpen(false)}
+                                <a
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSdUiQ3npHVS8Y-xkYun-3plF8Q77k7o7t57SkR09kiyWz8ppQ/viewform"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="mt-6 w-full py-3 bg-[#E31E24] text-white font-bold text-center rounded-sm shadow hover:bg-red-700 transition-colors uppercase tracking-widest"
                                 >
                                     Register Now
-                                </Link>
+                                </a>
                             </div>
                         </motion.div>
                     </motion.div>
