@@ -21,7 +21,8 @@ const navLinks: NavLink[] = [
     { name: "Publications", href: "/#publications" },
     { name: "Committee", href: "/#committee" },
     { name: "Call For Papers", href: "/#call-for-papers" },
-    { name: "Paper submission", href: "/#paper-submission" },
+    { name: "Paper submission", href: "/#registration" },
+
     { name: "Sponsorship", href: "/#sponsorship" },
 ];
 
