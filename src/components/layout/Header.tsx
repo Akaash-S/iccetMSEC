@@ -107,7 +107,7 @@ export function Header() {
                 <div className="container mx-auto px-4 max-w-[1600px] flex items-center justify-between">
 
                     {/* Desktop Nav */}
-                    <nav className="hidden xl:flex items-center gap-5 2xl:gap-8">
+                    <nav className="hidden xl:flex flex-1 items-center justify-around">
                         {navLinks.map((link) => (
                             <div
                                 key={link.name}

@@ -25,7 +25,6 @@ export function RunningHighlights() {
                             "Selected papers will be published in Scopus Indexed Journals",
                             "Hybrid Mode Conference: Physical & Virtual Participation",
                             "Keynote Speakers from Global Top Universities",
-                            "Workshop on 3D Printing & Statistical Tools",
                         ].map((item, index) => (
                             <span key={index} className="flex items-center gap-2 text-sm font-medium tracking-wide">
                                 <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
@@ -38,7 +37,6 @@ export function RunningHighlights() {
                             "Selected papers will be published in Scopus Indexed Journals",
                             "Hybrid Mode Conference: Physical & Virtual Participation",
                             "Keynote Speakers from Global Top Universities",
-                            "Workshop on 3D Printing & Statistical Tools",
                         ].map((item, index) => (
                             <span key={`dup-${index}`} className="flex items-center gap-2 text-sm font-medium tracking-wide">
                                 <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
