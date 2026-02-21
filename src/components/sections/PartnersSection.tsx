@@ -4,6 +4,9 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const partners = [
+    { name: "MSRC", logo: "/images/organizers/msrc.png" },
+    { name: "IEEE", logo: "/images/partners/IEEE.jpg" },
+    { name: "Springer", logo: "/images/partners/springer.png" },
     { name: "ISRO", logo: "/images/organizers/isro.jpg" },
     { name: "NIELIT", logo: "/images/organizers/nielit.jpg" },
     { name: "CDAC", logo: "/images/organizers/cdac.jpg" },
@@ -15,6 +18,7 @@ const partners = [
     { name: "MMU", logo: "/images/organizers/mmu.jpg" },
     { name: "Chula", logo: "/images/organizers/chula.jpg" },
 ];
+
 
 export function PartnersSection() {
     return (

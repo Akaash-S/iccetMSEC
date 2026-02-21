@@ -160,6 +160,10 @@ export function Hero() {
                             <p className="text-sm text-gray-400 uppercase tracking-widest mb-6 font-semibold">Our Organization & Industry Partners</p>
                             <div className="flex flex-wrap justify-center items-center gap-6">
                                 {[
+                                    // Publishers & Standards
+                                    { name: "MSRC", logo: "/images/organizers/msrc.png" },
+                                    { name: "IEEE", logo: "/images/partners/IEEE.jpg" },
+                                    { name: "Springer", logo: "/images/partners/springer.png" },
                                     // International Companies
                                     { name: "ZF", logo: "/images/organizers/zf.jpg" },
                                     { name: "Virtusa", logo: "/images/organizers/virtusa.jpg" },
