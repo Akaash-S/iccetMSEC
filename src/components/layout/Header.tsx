@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { RunningHighlights } from "@/components/ui/RunningHighlights";
 
 interface NavLink {
     name: string;
@@ -25,20 +26,12 @@ const navLinks: NavLink[] = [
 ];
 
 export function Header() {
-    const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-    useEffect(() => {
-        const handleScroll = () => setScrolled(window.scrollY > 20);
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
     return (
-        <header className="sticky top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-md">
-
-            {/* ── Institution Banner (image strip) ── */}
+        <>
+            {/* ── Institution Banner — scrolls away naturally ── */}
             <div className="w-full bg-white border-b border-gray-100">
                 <div className="container mx-auto px-4 max-w-[1600px] flex items-center justify-between py-2 gap-4">
 
@@ -97,79 +90,80 @@ export function Header() {
                 </div>
             </div>
 
-            {/* ── Navigation Bar ── */}
-            <div
-                className={cn(
-                    "w-full bg-white transition-all duration-300",
-                    scrolled ? "py-1" : "py-0"
-                )}
-            >
-                <div className="container mx-auto px-4 max-w-[1600px] flex items-center justify-between">
+            {/* ── Sticky wrapper: Navbar + Ticker ── */}
+            <div className="sticky top-0 z-50 bg-white shadow-md border-b border-gray-200">
 
-                    {/* Desktop Nav */}
-                    <nav className="hidden xl:flex flex-1 items-center justify-around">
-                        {navLinks.map((link) => (
-                            <div
-                                key={link.name}
-                                className="relative"
-                                onMouseEnter={() => setActiveDropdown(link.name)}
-                                onMouseLeave={() => setActiveDropdown(null)}
-                            >
-                                <Link
-                                    href={link.href}
-                                    className="text-[15px] font-bold text-[#003366] hover:text-[#E31E24] transition-colors flex items-center gap-0.5 py-3"
+                {/* Navigation Bar */}
+                <div className="w-full bg-white">
+                    <div className="container mx-auto px-4 max-w-[1600px] flex items-center justify-between">
+
+                        {/* Desktop Nav */}
+                        <nav className="hidden xl:flex flex-1 items-center justify-around">
+                            {navLinks.map((link) => (
+                                <div
+                                    key={link.name}
+                                    className="relative"
+                                    onMouseEnter={() => setActiveDropdown(link.name)}
+                                    onMouseLeave={() => setActiveDropdown(null)}
                                 >
-                                    {link.name}
-                                    {link.dropdown && <ChevronDown size={14} className="mt-0.5 opacity-60" />}
-                                </Link>
+                                    <Link
+                                        href={link.href}
+                                        className="text-[15px] font-bold text-[#003366] hover:text-[#E31E24] transition-colors flex items-center gap-0.5 py-3"
+                                    >
+                                        {link.name}
+                                        {link.dropdown && <ChevronDown size={14} className="mt-0.5 opacity-60" />}
+                                    </Link>
 
-                                {/* Dropdown */}
-                                {link.dropdown && (
-                                    <AnimatePresence>
-                                        {activeDropdown === link.name && (
-                                            <motion.div
-                                                initial={{ opacity: 0, y: 10 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 10 }}
-                                                transition={{ duration: 0.15 }}
-                                                className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-b-md border-t-4 border-[#E31E24] overflow-hidden"
-                                            >
-                                                {link.dropdown.map((dropItem, idx) => (
-                                                    <Link
-                                                        key={idx}
-                                                        href={dropItem.href}
-                                                        className="flex items-start gap-2 px-4 py-3 text-sm text-[#003366] hover:bg-gray-50 hover:text-[#E31E24] transition-colors border-b border-gray-100 last:border-0 font-medium"
-                                                    >
-                                                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#E31E24] shrink-0"></span>
-                                                        <span className="leading-tight">{dropItem.name}</span>
-                                                    </Link>
-                                                ))}
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
-                                )}
-                            </div>
-                        ))}
-                    </nav>
+                                    {/* Dropdown */}
+                                    {link.dropdown && (
+                                        <AnimatePresence>
+                                            {activeDropdown === link.name && (
+                                                <motion.div
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    exit={{ opacity: 0, y: 10 }}
+                                                    transition={{ duration: 0.15 }}
+                                                    className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-b-md border-t-4 border-[#E31E24] overflow-hidden"
+                                                >
+                                                    {link.dropdown.map((dropItem, idx) => (
+                                                        <Link
+                                                            key={idx}
+                                                            href={dropItem.href}
+                                                            className="flex items-start gap-2 px-4 py-3 text-sm text-[#003366] hover:bg-gray-50 hover:text-[#E31E24] transition-colors border-b border-gray-100 last:border-0 font-medium"
+                                                        >
+                                                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#E31E24] shrink-0"></span>
+                                                            <span className="leading-tight">{dropItem.name}</span>
+                                                        </Link>
+                                                    ))}
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
+                                    )}
+                                </div>
+                            ))}
+                        </nav>
 
-                    {/* Register Button */}
-                    <div className="flex items-center gap-4 shrink-0 ml-auto">
-                        <Link
-                            href="/#registration"
-                            className="hidden xl:block px-8 py-2.5 bg-[#E31E24] text-white font-bold text-sm uppercase tracking-wide rounded-sm shadow-sm hover:bg-red-700 transition-colors"
-                        >
-                            Register
-                        </Link>
+                        {/* Register Button + Mobile Toggle */}
+                        <div className="flex items-center gap-4 shrink-0 ml-auto">
+                            <Link
+                                href="/#registration"
+                                className="hidden xl:block px-8 py-2.5 bg-[#E31E24] text-white font-bold text-sm uppercase tracking-wide rounded-sm shadow-sm hover:bg-red-700 transition-colors"
+                            >
+                                Register
+                            </Link>
 
-                        {/* Mobile Toggle */}
-                        <button
-                            className="xl:hidden p-2 text-[#003366]"
-                            onClick={() => setMobileMenuOpen(true)}
-                        >
-                            <Menu size={28} />
-                        </button>
+                            <button
+                                className="xl:hidden p-2 text-[#003366]"
+                                onClick={() => setMobileMenuOpen(true)}
+                            >
+                                <Menu size={28} />
+                            </button>
+                        </div>
                     </div>
                 </div>
+
+                {/* Running Highlights Ticker — sticks below the nav */}
+                <RunningHighlights />
             </div>
 
             {/* ── Mobile Menu Overlay ── */}
@@ -243,6 +237,6 @@ export function Header() {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </header>
+        </>
     );
 }

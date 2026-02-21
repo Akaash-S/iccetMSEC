@@ -3,17 +3,12 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Sparkles, Layers, Wifi, Cpu } from "lucide-react";
-import { RunningHighlights } from "@/components/ui/RunningHighlights";
 import Image from "next/image";
 
 export function Hero() {
     return (
         <section className="relative min-h-screen flex flex-col bg-dark text-white overflow-hidden">
 
-            {/* Running Highlights Ticker */}
-            <div className="relative z-50">
-                <RunningHighlights />
-            </div>
 
             <div className="relative flex-grow flex items-center justify-center pt-12 pb-20">
                 {/* Layered Background with Tech Theme */}
