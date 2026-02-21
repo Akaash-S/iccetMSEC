@@ -31,13 +31,14 @@ export function RegistrationSection() {
                 </div>
 
                 <div className="flex flex-col items-center gap-4">
-                    <button
-                        className="px-10 py-4 bg-primary text-white font-bold rounded-lg shadow-lg hover:bg-primary-dark transition-all opacity-50 cursor-not-allowed"
-                        disabled
+                    <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdUiQ3npHVS8Y-xkYun-3plF8Q77k7o7t57SkR09kiyWz8ppQ/viewform"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-white font-bold rounded-lg shadow-lg hover:bg-primary-dark transition-all"
                     >
-                        Registration Link
-                    </button>
-                    <span className="text-accent font-bold animate-pulse">Coming Soon!</span>
+                        Register Now <ArrowRight size={18} />
+                    </a>
                 </div>
             </div>
         </section>
