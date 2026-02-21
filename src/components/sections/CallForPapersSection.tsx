@@ -202,6 +202,16 @@ const tracks = [
         ]
     },
     {
+        title: "AI for Management Studies and Business Transformation",
+        topics: [
+            "AI-Driven Strategic Planning and Decision Intelligence",
+            "Generative AI for Marketing, Branding, and Customer Engagement",
+            "AI for Human Resource Analytics, Talent Management, and Workforce Reskilling",
+            "AI for Financial Intelligence, Risk Forecasting, and Fraud Detection",
+            "AI for Operations, Supply Chain Optimization, and Entrepreneurial Growth"
+        ]
+    },
+    {
         title: "Open Innovation",
         topics: [
             "Innovative AI Applications across Domains",
