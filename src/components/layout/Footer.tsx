@@ -85,7 +85,7 @@ export function Footer() {
 
                         <div className="mt-12 pt-8 border-t border-white/10">
                             <p className="text-sm text-gray-500">
-                                © 2026 KCG College of Technology. All rights reserved.
+                                © 2026 Meenakshi Sundararajan Engineering College. All rights reserved.
                             </p>
                         </div>
                     </div>

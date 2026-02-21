@@ -9,6 +9,7 @@ import { PaperSubmissionSection } from "@/components/sections/PaperSubmissionSec
 import { SponsorshipSection } from "@/components/sections/SponsorshipSection";
 import { PartnersSection } from "@/components/sections/PartnersSection";
 import { RegistrationSection } from "@/components/sections/RegistrationSection";
+import { AboutChennaiSection } from "@/components/sections/AboutChennaiSection";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <PaperSubmissionSection />
       <SponsorshipSection />
       <RegistrationSection />
+      <AboutChennaiSection />
     </div>
   );
 }
