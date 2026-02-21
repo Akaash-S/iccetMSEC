@@ -16,7 +16,7 @@ export function PublicationsSection() {
                     <div className="mt-8 p-6 bg-white rounded-xl shadow-sm border border-gray-100 max-w-3xl mx-auto">
                         <h3 className="text-xl font-bold text-gray-800 mb-2 border-b pb-2">Publication Policy</h3>
                         <div className="text-center py-4 text-gray-700">
-                            All accepted papers will be published in <span className="font-bold text-primary">Scopus Proceedings / Scopus Indexed Journals</span>.
+                            All accepted papers will be published in <span className="font-bold text-primary">Springer Journal</span>.
                         </div>
                     </div>
                 </div>

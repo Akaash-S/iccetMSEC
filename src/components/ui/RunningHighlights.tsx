@@ -4,8 +4,8 @@ import React from "react";
 
 const items = [
     "Abstract Submission Deadline: October 2025",
-    "Selected papers will be published in Scopus Indexed Journals",
-    "Extended papers are eligible for publication in Springer",
+    "Selected papers will be published in Springer Journal",
+    "Extended papers are eligible for publication in Springer Journal",
     "Hybrid Mode Conference: Physical & Virtual Participation",
     "Keynote Speakers from Global Top Universities",
 ];
