@@ -49,7 +49,7 @@ export default function AboutPage() {
                     <div className="text-gray-700 bg-orange-50 p-8 rounded-2xl border border-orange-100 leading-relaxed text-lg text-justify">
                         <h3 className="text-xl font-bold mb-4 text-dark text-center">Meenakshi Sundararajan Engineering College</h3>
                         <p className="mb-4">
-                            Meenakshi Sundararajan Engineering College (MSEC) was established by the IIET Society in 2001. This institution is a part of the prestigious KRS Group of Institutions, which also includes the renowned IIET (Indian Institute of Engineering Technology), established in 1947 by our Founder, Late Shri K. R. Sundararajan, the well-known Meenakshi College for Women; and the Meenakshi Sundararajan School of Management.
+                            Meenakshi Sundararajan Engineering College (MSEC) was established by the IIET Society in 2001. This institution is a part of the prestigious KRS Group of Institutions, which also includes the renowned IIET (Indian Institute of Engineering Technology), established in 1947 by our Founder, Late Shri K. R. Sundararajan, a visionary educationist and philanthropist who founded the well-known Meenakshi College for Women; and the Meenakshi Sundararajan School of Management.
                         </p>
                         <p className="mb-4">
                             The institutions on the KRS Campus are known for the quality education and discipline. We have consistently outshone our peers not only in academics but also in co-curricular activities.
