@@ -46,16 +46,16 @@ export default function AboutPage() {
                         <span className="w-8 h-1 bg-primary inline-block"></span>
                         About MSEC
                     </h2>
-                    <div className="text-gray-700 bg-orange-50 p-8 rounded-2xl border border-orange-100 leading-relaxed text-lg">
-                        <h3 className="text-xl font-bold mb-4 text-dark">Meenakshi Sundararajan Engineering College</h3>
+                    <div className="text-gray-700 bg-orange-50 p-8 rounded-2xl border border-orange-100 leading-relaxed text-lg text-justify">
+                        <h3 className="text-xl font-bold mb-4 text-dark text-center">Meenakshi Sundararajan Engineering College</h3>
                         <p className="mb-4">
-                            <strong>Meenakshi Sundararajan Engineering College (MSEC)</strong> was established by the IIET Society in 2001. This institution is a part of the prestigious KRS Group of Institutions which also includes the renowned IIET (Indian Institute of Engineering Technology) established in 1947 by our Founder <strong>Late Shri K.R. Sundararajan</strong>, the well-known Meenakshi College for Women and the more recently established Meenakshi Sundararajan School of Management.
+                            Meenakshi Sundararajan Engineering College (MSEC) was established by the IIET Society in 2001. This institution is a part of the prestigious KRS Group of Institutions, which also includes the renowned IIET (Indian Institute of Engineering Technology), established in 1947 by our Founder, Late Shri K. R. Sundararajan, the well-known Meenakshi College for Women; and the Meenakshi Sundararajan School of Management.
                         </p>
                         <p className="mb-4">
-                            The institutions on the KRS Campus are known for the quality education they impart and their stringent levels of discipline. We have consistently outshone all our peers, not only in academics, but in co-curricular activities as well.
+                            The institutions on the KRS Campus are known for the quality education and discipline. We have consistently outshone our peers not only in academics but also in co-curricular activities.
                         </p>
                         <p>
-                            We are dedicated to imparting Engineering education to young men and women, grooming their overall personality with the highest emphasis on ethical values and honing them to face the challenges of the industry and the nation at large.
+                            The institution is committed to imparting engineering education to young men and women, grooming their overall personality with the highest emphasis on ethical values, and preparing them to face the challenges of the industry, nation and abroad at large.
                         </p>
                     </div>
                 </section>
