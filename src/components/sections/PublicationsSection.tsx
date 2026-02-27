@@ -66,11 +66,11 @@ export function PublicationsSection() {
                                 <tbody>
                                     <tr className="bg-white border-b hover:bg-gray-50">
                                         <td className="px-6 py-4 font-bold text-primary border-r">Account Name</td>
-                                        <td className="px-6 py-4 text-gray-700">MEENAKSHI SUNDARARAJAN ENGINEERING COLLEGE - SEMINAR FUND</td>
+                                        <td className="px-6 py-4 text-gray-700">MEENAKSHI SUNDARARAJAN ENGINEERING COLLEGE - INTERNATIONAL CONFERENCE - 2026</td>
                                     </tr>
                                     <tr className="bg-gray-50 border-b hover:bg-gray-100">
                                         <td className="px-6 py-4 font-bold text-primary border-r">Account Number</td>
-                                        <td className="px-6 py-4 text-gray-700 font-mono">30479154343</td>
+                                        <td className="px-6 py-4 text-gray-700 font-mono">30479154634</td>
                                     </tr>
                                     <tr className="bg-white border-b hover:bg-gray-50">
                                         <td className="px-6 py-4 font-bold text-primary border-r">IFSC Code</td>
@@ -78,7 +78,7 @@ export function PublicationsSection() {
                                     </tr>
                                     <tr className="bg-gray-50 hover:bg-gray-100">
                                         <td className="px-6 py-4 font-bold text-primary border-r">Bank Name</td>
-                                        <td className="px-6 py-4 text-gray-700">STATE BANK OF INDIA</td>
+                                        <td className="px-6 py-4 text-gray-700">STATE BANK OF INDIA - KODAMBAKKAM BRANCH - CHENNAI 600024</td>
                                     </tr>
                                 </tbody>
                             </table>
