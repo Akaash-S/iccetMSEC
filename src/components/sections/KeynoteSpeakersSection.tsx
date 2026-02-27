@@ -38,13 +38,13 @@ const speakers = [
         name: "Dr. Manjula Gandhi",
         title: "Associate Professor & Head (I/C), Department of Computing (Software Systems), Coimbatore Institute of Technology",
         email: null,
-        image: null
+        image: "/images/keynote/2.jpg"
     },
     {
         name: "Dr. Shashi Kant Pandey",
         title: "Scientist C @SETS, Under the O/o Principal Scientific Advisor to the GOI",
         email: "shashikantshvet@gmail.com",
-        image: null
+        image: "/images/keynote/5.jpg"
     }
 ];
 

@@ -241,7 +241,7 @@ export function CallForPapersSection() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: idx * 0.05 }}
+                            transition={{ duration: 0.3, delay: 0.05 }}
                             className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-primary/30 transition-all"
                         >
                             <div className="flex items-start gap-4 mb-4">
