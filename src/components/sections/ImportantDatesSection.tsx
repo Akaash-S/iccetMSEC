@@ -2,12 +2,6 @@ import { Calendar, CheckCircle, Clock, FileText, UserCheck } from "lucide-react"
 
 const dates = [
     {
-        label: "Abstract Submission",
-        date: "28 February 2026",
-        icon: FileText,
-        color: "bg-blue-50 text-blue-600",
-    },
-    {
         label: "Paper Submission",
         date: "31 March 2026",
         icon: FileText,

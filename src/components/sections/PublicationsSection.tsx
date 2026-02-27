@@ -94,17 +94,16 @@ export function PublicationsSection() {
                         </h3>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                    <div className="flex flex-wrap justify-center gap-6">
                         {[
-                            { label: "Abstract Submission", date: "28 February 2026", color: "border-blue-500" },
                             { label: "Paper Submission", date: "31 March 2026", color: "border-indigo-500" },
                             { label: "Acceptance Notification", date: "15 May 2026", color: "border-purple-500" },
                             { label: "Registration & Camera Ready", date: "31 May 2026", color: "border-green-500" },
                             { label: "Conference Date", date: "12 August 2026", color: "border-accent", highlight: true },
                         ].map((item, index) => (
-                            <div key={index} className={`bg-white p-4 rounded-lg shadow-md border-t-4 ${item.color} hover:-translate-y-1 transition-transform ${item.highlight ? 'ring-2 ring-accent/20' : ''}`}>
-                                <p className="text-gray-500 text-xs font-bold uppercase tracking-wide mb-2 h-8 flex items-center">{item.label}</p>
-                                <p className="text-lg font-bold text-dark">{item.date}</p>
+                            <div key={index} className={`bg-white p-6 rounded-xl shadow-md border-t-4 ${item.color} w-full md:w-[220px] flex flex-col items-center text-center hover:-translate-y-1 transition-transform ${item.highlight ? 'ring-2 ring-accent/20' : ''}`}>
+                                <p className="text-gray-500 text-xs font-bold uppercase tracking-wide mb-2 h-8 flex items-center justify-center">{item.label}</p>
+                                <p className="text-xl font-bold text-dark">{item.date}</p>
                             </div>
                         ))}
                     </div>
