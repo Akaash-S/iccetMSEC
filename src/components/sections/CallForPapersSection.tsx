@@ -212,7 +212,7 @@ const tracks = [
         ]
     },
     {
-        title: "Open Innovation",
+        title: "AI in Other Fields",
         topics: [
             "Innovative AI Applications across Domains",
             "Cross-Disciplinary AI Research",

@@ -66,19 +66,19 @@ export function PublicationsSection() {
                                 <tbody>
                                     <tr className="bg-white border-b hover:bg-gray-50">
                                         <td className="px-6 py-4 font-bold text-primary border-r">Account Name</td>
-                                        <td className="px-6 py-4 text-gray-700">Principal MSEC</td>
+                                        <td className="px-6 py-4 text-gray-700">MEENAKSHI SUNDARARAJAN ENGINEERING COLLEGE - SEMINAR FUND</td>
                                     </tr>
                                     <tr className="bg-gray-50 border-b hover:bg-gray-100">
                                         <td className="px-6 py-4 font-bold text-primary border-r">Account Number</td>
-                                        <td className="px-6 py-4 text-gray-700 font-mono">Coming Soon</td>
+                                        <td className="px-6 py-4 text-gray-700 font-mono">30479154343</td>
                                     </tr>
                                     <tr className="bg-white border-b hover:bg-gray-50">
                                         <td className="px-6 py-4 font-bold text-primary border-r">IFSC Code</td>
-                                        <td className="px-6 py-4 text-gray-700 font-mono">Coming Soon</td>
+                                        <td className="px-6 py-4 text-gray-700 font-mono">SBIN0001444</td>
                                     </tr>
                                     <tr className="bg-gray-50 hover:bg-gray-100">
                                         <td className="px-6 py-4 font-bold text-primary border-r">Bank Name</td>
-                                        <td className="px-6 py-4 text-gray-700">Coming Soon</td>
+                                        <td className="px-6 py-4 text-gray-700">STATE BANK OF INDIA</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -97,7 +97,7 @@ export function PublicationsSection() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
                         {[
                             { label: "Abstract Submission", date: "28 February 2026", color: "border-blue-500" },
-                            { label: "Paper Submission", date: "10 April 2026", color: "border-indigo-500" },
+                            { label: "Paper Submission", date: "31 March 2026", color: "border-indigo-500" },
                             { label: "Acceptance Notification", date: "15 May 2026", color: "border-purple-500" },
                             { label: "Registration & Camera Ready", date: "31 May 2026", color: "border-green-500" },
                             { label: "Conference Date", date: "12 August 2026", color: "border-accent", highlight: true },

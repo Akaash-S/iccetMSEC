@@ -27,7 +27,9 @@ export function AboutSection() {
 
                     <div className="flex justify-center mt-10">
                         <Link
-                            href="#"
+                            href="/MSEC-conference.pdf"
+                            target="_blank"
+                            download
                             className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-all shadow-lg hover:shadow-primary/30"
                         >
                             <Download size={20} />

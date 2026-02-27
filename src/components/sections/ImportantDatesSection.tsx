@@ -9,7 +9,7 @@ const dates = [
     },
     {
         label: "Paper Submission",
-        date: "10 April 2026",
+        date: "31 March 2026",
         icon: FileText,
         color: "bg-indigo-50 text-indigo-600",
     },
