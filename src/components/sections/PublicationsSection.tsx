@@ -21,9 +21,7 @@ export function PublicationsSection() {
                     </div>
                 </div>
 
-                {/* Registration Fees & Bank Details */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-                    {/* Fees List */}
+                {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
                     <div>
                         <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
                             REGISTRATION FEES
@@ -50,7 +48,6 @@ export function PublicationsSection() {
                         </div>
                     </div>
 
-                    {/* Bank Details Table */}
                     <div>
                         <h3 className="text-2xl font-bold text-primary mb-6">
                             ACCOUNT DETAILS
@@ -84,7 +81,7 @@ export function PublicationsSection() {
                             </table>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Important Dates */}
                 <div id="dates">

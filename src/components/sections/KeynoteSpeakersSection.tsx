@@ -5,26 +5,8 @@ import { User, Globe, Award } from "lucide-react";
 
 const speakers = [
     {
-        name: "Mr. Jai Ganesh Suresh",
-        title: "Senior AI Architect Lead, Valeo India Pvt. Ltd",
-        email: "ganesh92jai@gmail.com",
-        image: "/images/keynote/1.jpg"
-    },
-    {
-        name: "Karthiganesh Durai",
-        title: "Founder & CEO, Kwantumg Research Labs Pvt Ltd",
-        email: "karthiganesh@kwantumg.com",
-        image: "/images/keynote/3.jpg"
-    },
-    {
-        name: "Dr. Balakrishnan S",
-        title: "Associate Professor, Department of Physics, School of Advanced Sciences, Vellore Institute of Technology",
-        email: "sbalakrishnan@vit.ac.in",
-        image: "/images/keynote/4.jpg"
-    },
-    {
         name: "Sasitharan Nagapan",
-        title: "Associate Professor, Faculty of Civil Engineering and Built Environment, University Tun Hussein Onn Malaysia",
+        title: "Associate Professor, Faculty of Civil Engineering and Built Environment, University Tun Hussein Onn Malaysia, Johor, Malaysia",
         email: "sasitharan@uthm.edu.my",
         image: "/images/keynote/6.jpg"
     },
@@ -35,14 +17,32 @@ const speakers = [
         image: "/images/keynote/7.jpg"
     },
     {
+        name: "Mr. Jai Ganesh Suresh",
+        title: "Senior AI Architect Lead, Valeo India Pvt. Ltd",
+        email: "ganesh92jai@gmail.com",
+        image: "/images/keynote/1.jpg"
+    },
+    {
+        name: "Karthiganesh Durai",
+        title: "Founder & CEO, Kwantumg Research Labs Pvt Ltd, Bengaluru, Karnataka, India",
+        email: "karthiganesh@kwantumg.com",
+        image: "/images/keynote/3.jpg"
+    },
+    {
+        name: "Dr. Balakrishnan S",
+        title: "Associate Professor, Department of Physics, School of Advanced Sciences, Vellore Institute of Technology, Vellore, Tamil Nadu, India",
+        email: "sbalakrishnan@vit.ac.in",
+        image: "/images/keynote/4.jpg"
+    },
+    {
         name: "Dr. Manjula Gandhi",
-        title: "Associate Professor & Head (I/C), Department of Computing (Software Systems), Coimbatore Institute of Technology",
+        title: "Associate Professor & Head (I/C), Department of Computing (Software Systems), Coimbatore Institute of Technology, Coimbatore, Tamil Nadu, India",
         email: null,
         image: "/images/keynote/2.jpg"
     },
     {
         name: "Dr. Shashi Kant Pandey",
-        title: "Scientist C @SETS, Under the O/o Principal Scientific Advisor to the GOI",
+        title: "Scientist C @SETS, Under the O/o Principal Scientific Advisor to the GOI, Chennai, Tamil Nadu, India",
         email: "shashikantshvet@gmail.com",
         image: "/images/keynote/5.jpg"
     }
