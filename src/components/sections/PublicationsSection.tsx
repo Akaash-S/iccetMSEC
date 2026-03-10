@@ -13,10 +13,15 @@ export function PublicationsSection() {
                         PUBLICATIONS & REGISTRATION
                         <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-accent rounded-full"></span>
                     </h2>
-                    <div className="mt-8 p-6 bg-white rounded-xl shadow-sm border border-gray-100 max-w-3xl mx-auto">
-                        <h3 className="text-xl font-bold text-gray-800 mb-2 border-b pb-2">Publication Policy</h3>
-                        <div className="text-center py-4 text-gray-700">
-                            All accepted papers will be published in <span className="font-bold text-primary">Springer Journal</span>.
+                    <div className="mt-10 p-8 md:p-10 bg-primary rounded-2xl shadow-lg max-w-4xl mx-auto">
+                        <h3 className="text-2xl font-bold text-center text-white mb-6 border-b border-white/20 pb-4">Publication Policy</h3>
+                        <div className="text-center py-2 flex flex-col items-center gap-8">
+                            <p className="text-lg md:text-xl text-white/90 font-medium">
+                                All accepted papers will be published in Springer Journal
+                            </p>
+                            <div className="bg-white py-6 px-10 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 w-full max-w-sm flex justify-center">
+                                <img src="/images/partners/springer.png" alt="Springer Journal" className="h-20 md:h-24 object-contain" />
+                            </div>
                         </div>
                     </div>
                 </div>
