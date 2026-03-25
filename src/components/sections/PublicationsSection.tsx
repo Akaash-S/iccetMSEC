@@ -98,7 +98,7 @@ export function PublicationsSection() {
 
                     <div className="flex flex-wrap justify-center gap-6">
                         {[
-                            { label: "Paper Submission", date: "31 March 2026", color: "border-indigo-500" },
+                            { label: "Paper Submission", date: "30 April 2026", color: "border-indigo-500" },
                             { label: "Acceptance Notification", date: "15 May 2026", color: "border-purple-500" },
                             { label: "Registration & Camera Ready", date: "31 May 2026", color: "border-green-500" },
                             { label: "Conference Date", date: "12 August 2026", color: "border-accent", highlight: true },
