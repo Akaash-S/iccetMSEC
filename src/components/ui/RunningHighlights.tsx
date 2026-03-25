@@ -3,7 +3,7 @@
 import React from "react";
 
 const items = [
-    "Paper Submission Deadline: 31st March 2026",
+    "Full Paper Submission Deadline: 30th April 2026",
     "Selected papers will be published in Springer Journal",
     "Extended papers are eligible for publication in Springer Journal",
     "Hybrid Mode Conference: Physical & Virtual Participation",
