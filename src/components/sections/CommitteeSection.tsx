@@ -51,6 +51,27 @@ const advisoryCommittee = [
         aff: "Vellore Institute of Technology",
         email: "albert.alexander@vit.ac.in",
         phone: "9865931597"
+    },
+    {
+        name: "Dr. Sunday Ayoola OKE",
+        role: "Faculty",
+        aff: "University of Lagos, Nigeria",
+        email: "saoke01@gmail.com",
+        phone: ""
+    },
+    {
+        name: "Dr. Xiao-Zhi Gao",
+        role: "Professor",
+        aff: "Computing University of Eastern Finland, Finland",
+        email: "xiao-zhi.gao@uef.fi",
+        phone: ""
+    },
+    {
+        name: "Dr. Xavier Fernando",
+        role: "Professor, Electrical & Computer Engineering",
+        aff: "Ryerson University, Canada",
+        email: "fernando@torontomu.ca",
+        phone: ""
     }
 ];
 

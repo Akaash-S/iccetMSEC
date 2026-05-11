@@ -118,7 +118,7 @@ export function Hero() {
                                 <Calendar className="text-secondary w-6 h-6" />
                                 <div className="text-left">
                                     <p className="text-xs text-gray-400 uppercase tracking-wider">Date</p>
-                                    <p className="text-xl font-bold text-white">12-14 Aug 2026</p>
+                                    <p className="text-xl font-bold text-white">14 – 16 December 2026</p>
                                 </div>
                             </div>
 
