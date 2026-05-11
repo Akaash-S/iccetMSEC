@@ -37,7 +37,7 @@ const speakers = [
     {
         name: "Dr. Manjula Gandhi",
         title: "Associate Professor & Head (I/C), Department of Computing (Software Systems), Coimbatore Institute of Technology, Coimbatore, Tamil Nadu, India",
-        email: null,
+        email: "manjulagandhi@cit.edu.in",
         image: "/images/keynote/2.jpg"
     },
     {
@@ -45,6 +45,12 @@ const speakers = [
         title: "Scientist C @SETS, Under the O/o Principal Scientific Advisor to the GOI, Chennai, Tamil Nadu, India",
         email: "shashikantshvet@gmail.com",
         image: "/images/keynote/5.jpg"
+    },
+    {
+        name: "Srinivas Sanjeevi, MD, PhD",
+        title: "Department of Hepato-Pancreato-Biliary Surgery, Division of Surgery and Urology, Akademiska sjukhuset, Uppsala University",
+        email: "srinivas.sanjeevi@uu.se",
+        image: "/images/keynote/six.jpeg"
     }
 ];
 
