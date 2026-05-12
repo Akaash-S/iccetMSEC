@@ -79,7 +79,7 @@ const advisoryCommittee = [
 
 const technicalCommittee = [
     {
-        name: "Dr. J. Jeyanti",
+        name: "Dr. J. Jeyanthi",
         role: "Professor and HoD, Department of Industrial Biotechnology",
         aff: "Government College of Technology (GCT), Coimbatore",
         email: "jjeyanthi@gct.ac.in",
